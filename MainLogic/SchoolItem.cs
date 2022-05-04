@@ -8,14 +8,12 @@ namespace SchoolSoft.MainLogic
 {
     class SchoolItem
     {
-        private string _name;
-
-        public string Name { get => _name; set => _name = value; }
+        public string Name { get; set; }
 
         // constructors
         public SchoolItem(string name)
         {
-            _name = name;
+            Name = name;
         }
         public SchoolItem() { }
 

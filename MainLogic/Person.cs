@@ -8,13 +8,9 @@ namespace SchoolSoft.MainLogic
 {
     class Person
     {
-        private string _name;
-        private string _surname;
-        private DateTime _date;
-
-        public string Name { get => _name; set => _name = value; }
-        public string Surname { get => _surname; set => _surname = value; }
-        public DateTime Date { get => _date; set => _date = value; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public DateTime Date { get; set; }
 
         // constructors
         public Person()
@@ -23,14 +19,14 @@ namespace SchoolSoft.MainLogic
         }
         public Person(string name,string surname,DateTime date)
         {
-            _name = name;
-            _surname = surname;
-            _date = date;
+            Name = name;
+            Surname = surname;
+            Date = date;
         }
         public Person(string name, string surname)
         {
-            _name = name;
-            _surname = surname;
+            Name = name;
+            Surname = surname;
         }
 
         override public string ToString()

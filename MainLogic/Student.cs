@@ -8,20 +8,19 @@ namespace SchoolSoft.MainLogic
 {
     class Student : Person
     {
-        private List<SchoolItemMarks> _marks;
-        
-        public List<SchoolItemMarks> Marks { get => _marks; set => _marks = value; }
+        public List<SchoolItemMarks> Marks { get; set; }
 
         // constructors
         public Student()
         {
-            _marks = new List<SchoolItemMarks>();
+            Marks = new List<SchoolItemMarks>();
         }
-        public Student(string name,string surname) : base(name,surname) { _marks = new List<SchoolItemMarks>(); }
+        public Student(string name,string surname) : base(name,surname) { Marks = new List<SchoolItemMarks>(); }
         public Student(string name,string surname,DateTime date,List<SchoolItemMarks> marks) : base(name,surname,date)
         {
-            _marks = marks;
+            Marks = marks;
         }
+        public Student(string name, string surname, DateTime date) : base(name, surname, date) { Marks = new List<SchoolItemMarks>(); }
 
         public override string ToString()
         {

@@ -8,3 +8,13 @@ C:\Users\Pc\Desktop\SchoolSoft\bin\Debug\SchoolSoft.exe
 C:\Users\Pc\Desktop\SchoolSoft\bin\Debug\SchoolSoft.pdb
 C:\Users\Pc\Desktop\SchoolSoft\obj\Debug\SchoolSoft.exe
 C:\Users\Pc\Desktop\SchoolSoft\obj\Debug\SchoolSoft.pdb
+C:\Users\User\Desktop\SchoolSoft\bin\Debug\SchoolSoft.exe.config
+C:\Users\User\Desktop\SchoolSoft\bin\Debug\SchoolSoft.exe
+C:\Users\User\Desktop\SchoolSoft\bin\Debug\SchoolSoft.pdb
+C:\Users\User\Desktop\SchoolSoft\obj\Debug\SchoolSoft.csprojAssemblyReference.cache
+C:\Users\User\Desktop\SchoolSoft\obj\Debug\SchoolSoft.Form1.resources
+C:\Users\User\Desktop\SchoolSoft\obj\Debug\SchoolSoft.Properties.Resources.resources
+C:\Users\User\Desktop\SchoolSoft\obj\Debug\SchoolSoft.csproj.GenerateResource.cache
+C:\Users\User\Desktop\SchoolSoft\obj\Debug\SchoolSoft.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\SchoolSoft\obj\Debug\SchoolSoft.exe
+C:\Users\User\Desktop\SchoolSoft\obj\Debug\SchoolSoft.pdb

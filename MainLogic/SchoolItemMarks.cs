@@ -8,18 +8,15 @@ namespace SchoolSoft.MainLogic
 {
     class SchoolItemMarks
     {
-        private SchoolItem _item;
-        private List<int> _marks;
-
-        public SchoolItem Item { get => _item; set => _item = value; }
-        public List<int> Marks { get => _marks; set => _marks = value; }
+        public SchoolItem Item { get; set; }
+        public List<int> Marks { get; set; }
 
         // constructors
         public SchoolItemMarks(){}
         public SchoolItemMarks(SchoolItem item, List<int> marks)
         {
-            _item = item;
-            _marks = marks;
+            Item = item;
+            Marks = marks;
         }
 
         public override string ToString()
