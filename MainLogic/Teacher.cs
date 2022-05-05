@@ -8,16 +8,16 @@ namespace SchoolSoft.MainLogic
 {
     class Teacher : Person
     {
-        public SchoolItem Item { get; set; }
+        public Discipline Item { get; set; }
 
         // constructors
-        public Teacher(SchoolItem item)
+        public Teacher(Discipline item)
         {
             Item = item;
         }
         public Teacher() { }
         public Teacher(string name,string surname,DateTime date) : base(name,surname,date) { }
-        public Teacher(string name,string surname,DateTime date,SchoolItem item) : base(name, surname, date) { Item = item; }
+        public Teacher(string name,string surname,DateTime date,Discipline item) : base(name, surname, date) { Item = item; }
         public Teacher(string name, string surname) : base(name, surname) { }
 
         public override string ToString()

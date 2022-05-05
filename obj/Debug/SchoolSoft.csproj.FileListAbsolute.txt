@@ -18,3 +18,5 @@ C:\Users\User\Desktop\SchoolSoft\obj\Debug\SchoolSoft.csproj.GenerateResource.ca
 C:\Users\User\Desktop\SchoolSoft\obj\Debug\SchoolSoft.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\SchoolSoft\obj\Debug\SchoolSoft.exe
 C:\Users\User\Desktop\SchoolSoft\obj\Debug\SchoolSoft.pdb
+C:\Users\User\Desktop\SchoolSoft\bin\Debug\SchoolDB.mdf
+C:\Users\User\Desktop\SchoolSoft\bin\Debug\SchoolDB_log.ldf

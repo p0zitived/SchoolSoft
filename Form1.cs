@@ -18,9 +18,9 @@ namespace SchoolSoft
             InitializeComponent();
 
             // student test
-            SchoolItem item = new SchoolItem("Matematica");
+            Discipline item = new Discipline("Matematica");
             int[] marks = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-            SchoolItemMarks itemMarks = new SchoolItemMarks(item, marks.ToList());
+            DisciplineMarks itemMarks = new DisciplineMarks(item, marks.ToList());
 
             Student student1 = new Student("Hitrov", "Dan", new DateTime(2003, 12, 13));
             student1.Marks.Add(itemMarks);

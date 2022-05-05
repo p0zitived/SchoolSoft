@@ -8,24 +8,24 @@ namespace SchoolSoft.MainLogic
 {
     class Student : Person
     {
-        public List<SchoolItemMarks> Marks { get; set; }
+        public List<DisciplineMarks> Marks { get; set; }
 
         // constructors
         public Student()
         {
-            Marks = new List<SchoolItemMarks>();
+            Marks = new List<DisciplineMarks>();
         }
-        public Student(string name,string surname) : base(name,surname) { Marks = new List<SchoolItemMarks>(); }
-        public Student(string name,string surname,DateTime date,List<SchoolItemMarks> marks) : base(name,surname,date)
+        public Student(string name,string surname) : base(name,surname) { Marks = new List<DisciplineMarks>(); }
+        public Student(string name,string surname,DateTime date,List<DisciplineMarks> marks) : base(name,surname,date)
         {
             Marks = marks;
         }
-        public Student(string name, string surname, DateTime date) : base(name, surname, date) { Marks = new List<SchoolItemMarks>(); }
+        public Student(string name, string surname, DateTime date) : base(name, surname, date) { Marks = new List<DisciplineMarks>(); }
 
         public override string ToString()
         {
             string s = "{" + Name + "," + Surname + "," + Date.ToString() + "} ";
-            foreach (SchoolItemMarks sm in Marks)
+            foreach (DisciplineMarks sm in Marks)
             {
                 s += sm.ToString() + " ";
             }
