@@ -9,6 +9,7 @@ namespace SchoolSoft.MainLogic
     class Teacher : Person
     {
         public Discipline Item { get; set; }
+        public float Salary { get; set; }
 
         // constructors
         public Teacher(Discipline item)
