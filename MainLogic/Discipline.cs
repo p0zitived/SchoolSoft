@@ -8,11 +8,13 @@ namespace SchoolSoft.MainLogic
 {
     class Discipline
     {
+        public int ID { get; set; }
         public string Name { get; set; }
 
         // constructors
-        public Discipline(string name)
+        public Discipline(int id, string name)
         {
+            ID = id;
             Name = name;
         }
         public Discipline() { }

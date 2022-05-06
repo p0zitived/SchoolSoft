@@ -20,6 +20,7 @@ namespace SchoolSoft.MainLogic
         public Teacher(string name,string surname,DateTime date) : base(name,surname,date) { }
         public Teacher(string name,string surname,DateTime date,Discipline item) : base(name, surname, date) { Item = item; }
         public Teacher(string name, string surname) : base(name, surname) { }
+        public Teacher(int id, string name, string surname, DateTime date, Discipline item) : base(id,name, surname, date) { Item = item; }
 
         public override string ToString()
         {

@@ -15,6 +15,7 @@ namespace SchoolSoft.MainLogic
         {
             Marks = new List<DisciplineMarks>();
         }
+        public Student(int id, string name, string surname, DateTime date) : base(id, name, surname, date) { }
         public Student(string name,string surname) : base(name,surname) { Marks = new List<DisciplineMarks>(); }
         public Student(string name,string surname,DateTime date,List<DisciplineMarks> marks) : base(name,surname,date)
         {

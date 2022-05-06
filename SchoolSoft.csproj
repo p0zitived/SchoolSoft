@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountHandler\Account.cs" />
+    <Compile Include="DataBaseConnection\DataStorage.cs" />
     <Compile Include="DataBaseConnection\DBC.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
