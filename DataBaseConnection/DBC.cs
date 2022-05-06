@@ -26,6 +26,8 @@ namespace SchoolSoft.DataBaseConnection
 
             fillDisciplines();
             fillTeachers();
+            fillGroups();
+            fillStudents();
         }
 
         public void fillDisciplines()
@@ -42,7 +44,6 @@ namespace SchoolSoft.DataBaseConnection
             // curatam datele noastre
             _dataSet.Tables.Clear();
         }
-
         public void fillTeachers()
         {
             SqlCommand command = new SqlCommand("Select* from Teachers", _sqlConnection);
@@ -68,24 +69,66 @@ namespace SchoolSoft.DataBaseConnection
 
                 Teacher teacher = new Teacher(_id, _teacherName, _teacherSurname, _birthDate, DS.GetDisciplineByID(_idDiscipline));
                 DS.Teachers.Add(teacher);
-                MessageBox.Show(teacher.ToString());
-                
             }
-        }
 
-        /*
+            // curatam pentru a putea folosi mai departe;
+            _dataSet.Tables.Clear();
+        }
         public void fillGroups()
         {
             SqlCommand command = new SqlCommand("Select* from Groups", _sqlConnection);
             _adapter.SelectCommand = command;
             _adapter.Fill(_dataSet);
 
+            int _id;
+            int _year;
+            char _letter;
+            int _idTeacher;
+
             foreach (DataRow row in _dataSet.Tables[0].Rows)
             {
-                DS.Groups.Add(new Group(row["ID"]))
+                _id = (int) row[0];
+                _year = (int) row[1];
+                _letter = ((string) row[2])[0];
+                _idTeacher = (int) row[3];
+
+                Group g = new Group(_id, _year, _letter, DS.GetTeacherById(_idTeacher));
+                DS.Groups.Add(g);
             }
+
+            _dataSet.Tables.Clear();
         }
-        */
+        public void fillStudents()
+        {
+            SqlCommand cmmd = new SqlCommand("Select* from Students", _sqlConnection);
+            _adapter.SelectCommand = cmmd;
+            _adapter.Fill(_dataSet);
+
+            int _id;
+            int _idGroup;
+            string _name;
+            string _surname;
+            DateTime _date;
+
+            foreach (DataRow row in _dataSet.Tables[0].Rows)
+            {
+                _id = (int) row[0];
+                _idGroup = (int) row[1];
+                _name = (string) row[2];
+                _surname = (string) row[3];
+                _date = (DateTime) row[4];
+
+                Student st = new Student(_id, _name, _surname, _date);
+                st.Group = DS.GetGroupById(_idGroup);
+                MessageBox.Show(st.ToString());
+            }
+
+            _dataSet.Tables.Clear();
+        }
+        public void fillDisciplineMarks()
+        {
+
+        }
 
         public void CloseConnection()
         {

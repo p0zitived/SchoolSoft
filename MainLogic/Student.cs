@@ -9,13 +9,14 @@ namespace SchoolSoft.MainLogic
     class Student : Person
     {
         public List<DisciplineMarks> Marks { get; set; }
+        public Group Group { get; set; }
 
         // constructors
         public Student()
         {
             Marks = new List<DisciplineMarks>();
         }
-        public Student(int id, string name, string surname, DateTime date) : base(id, name, surname, date) { }
+        public Student(int id, string name, string surname, DateTime date) : base(id, name, surname, date) { Marks = new List<DisciplineMarks>(); }
         public Student(string name,string surname) : base(name,surname) { Marks = new List<DisciplineMarks>(); }
         public Student(string name,string surname,DateTime date,List<DisciplineMarks> marks) : base(name,surname,date)
         {
