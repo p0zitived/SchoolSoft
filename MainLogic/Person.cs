@@ -8,6 +8,7 @@ namespace SchoolSoft.MainLogic
 {
     class Person
     {
+        public int ID { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public DateTime Date { get; set; }
@@ -16,6 +17,13 @@ namespace SchoolSoft.MainLogic
         public Person()
         {
 
+        }
+        public Person(int id, string name, string surname, DateTime date)
+        {
+            ID = id;
+            Name = name;
+            Surname = surname;
+            Date = date;
         }
         public Person(string name,string surname,DateTime date)
         {
