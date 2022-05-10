@@ -8,21 +8,21 @@ namespace SchoolSoft.MainLogic
 {
     class DisciplineMarks
     {
-        public Discipline Item { get; set; }
+        public Discipline Discipline { get; set; }
         public List<int> Marks { get; set; }
 
         // constructors
-        public DisciplineMarks(){}
-        public DisciplineMarks(Discipline item, List<int> marks)
+        public DisciplineMarks(){ Marks = new List<int>(); }
+        public DisciplineMarks(Discipline discipline, List<int> marks)
         {
-            Item = item;
+            Discipline = discipline;
             Marks = marks;
         }
 
         public override string ToString()
         {
             string s = "";
-            s += Item.ToString() + "{";
+            s += Discipline.ToString() + "{";
             foreach (int i in Marks)
             {
                 s += i + ",";

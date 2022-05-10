@@ -28,6 +28,7 @@ namespace SchoolSoft.DataBaseConnection
             fillTeachers();
             fillGroups();
             fillStudents();
+            fillDisciplineMarks();
         }
 
         public void fillDisciplines()
@@ -120,14 +121,43 @@ namespace SchoolSoft.DataBaseConnection
 
                 Student st = new Student(_id, _name, _surname, _date);
                 st.Group = DS.GetGroupById(_idGroup);
-                MessageBox.Show(st.ToString());
+
+                DS.Students.Add(st);
             }
 
             _dataSet.Tables.Clear();
         }
         public void fillDisciplineMarks()
         {
+            foreach (Student student in DS.Students) {
+                List<DisciplineMarks> _marks = new List<DisciplineMarks>();
 
+                foreach (Discipline discipline in DS.Disciplines)
+                {
+                    string query = string.Format("Select Mark from DisciplineMarks where IDStudent = {0} and IDDiscipline = {1}", student.ID, discipline.ID);
+                    SqlCommand cmmd = new SqlCommand(query, _sqlConnection);
+                    _adapter.SelectCommand = cmmd;
+                    _adapter.Fill(_dataSet);
+
+                    // creiem obiectul DisciplineMarks
+                    DisciplineMarks dm = new DisciplineMarks();
+
+                    // adaugam disciplina la DisciplineMarks
+                    dm.Discipline = DS.GetDisciplineByID(discipline.ID);
+
+                    // adaugam notele
+                    int _mark;
+                    foreach (DataRow row in _dataSet.Tables[0].Rows)
+                    {
+                        _mark = (int)row[0];
+                        dm.Marks.Add(_mark);
+                    }
+
+                    // legam DM (DisciplineMarks) cu studentul nostru;
+                    student.Marks.Add(dm);
+                    _dataSet.Tables.Clear();
+                }
+            }
         }
 
         public void CloseConnection()

@@ -22,5 +22,10 @@ namespace SchoolSoft
 
             dbc.CloseConnection();
         }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
