@@ -30,5 +30,30 @@ namespace SchoolSoft.MainLogic
             s += "}";
             return s;
         }
+        public int GetAbsences()
+        {
+            int a = 0;
+            for (int i = 0;i<Marks.Count;i++)
+            {
+                if (Marks[i] == -1)
+                {
+                    a++;
+                }
+            }
+            return a;
+        }
+        public float GetAverage() {
+            int sum = 0;
+            int count = 0;
+            for (int i=0;i<Marks.Count;i++)
+            {
+                if (Marks[i] != -1)
+                {
+                    sum += Marks[i];
+                    count++;
+                }
+            }
+            return (float) (sum / count);
+        }
     }
 }

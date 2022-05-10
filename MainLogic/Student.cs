@@ -31,7 +31,28 @@ namespace SchoolSoft.MainLogic
             {
                 s += sm.ToString() + " ";
             }
+            s += " Absente=" + GetAbsences();
             return s;
+        }
+        public int GetAbsences()
+        {
+            int a = 0;
+            foreach (DisciplineMarks dm in Marks)
+            {
+                a += dm.GetAbsences();
+            }
+            return a;
+        }
+        public float GetAverage()
+        {
+            float sum = 0;
+            int count = 0;
+            foreach (DisciplineMarks dm in Marks)
+            {
+                sum += dm.GetAverage();
+                count++;
+            }
+            return (float)(sum / count);
         }
     }
 }
