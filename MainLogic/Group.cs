@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SchoolSoft.MainLogic
 {
-    class Group
+    public class Group
     {
         public int ID { get; set; }
         public char GroupLetter { get; set; }

@@ -10,7 +10,7 @@ using SchoolSoft.MainLogic;
 
 namespace SchoolSoft.DataBaseConnection
 {
-    class DBC
+    public class DBC
     {
         public DataStorage DS { get; set; }
         private SqlConnection _sqlConnection;

@@ -25,6 +25,9 @@ namespace SchoolSoft
         private int actualPos = 0;
         private int time_remaining;
         #endregion
+        #region situatia curenta
+        private DBC dbc;
+        #endregion
 
         public MainMenuForm()
         {
@@ -36,11 +39,9 @@ namespace SchoolSoft
 
         private void MainMenuForm_Load(object sender, EventArgs e)
         {
-            /*
             string _cnnString = DBC.GetConnectionString("SchoolDB.mdf");
-            DBC dbc = new DBC(_cnnString);
+            dbc = new DBC(_cnnString);
             dbc.CloseConnection();
-            */
 
             calc_error = buttonsPanel.Margin.Right * 2;
             distance = buttonsPanel.Controls[0].Width;
@@ -140,7 +141,8 @@ namespace SchoolSoft
 
         private void b_SituatiaCurenta_Click(object sender, EventArgs e)
         {
-
+            SituatiaCurentaForm scf = new SituatiaCurentaForm(this,dbc.DS.Students[100],dbc.DS.Disciplines);
+            scf.Show();
         }
     }
 }

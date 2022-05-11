@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SchoolSoft.MainLogic
 {
-    class Discipline
+    public class Discipline
     {
         public int ID { get; set; }
         public string Name { get; set; }
