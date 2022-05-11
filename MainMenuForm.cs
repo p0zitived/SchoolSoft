@@ -29,6 +29,9 @@ namespace SchoolSoft
         public MainMenuForm()
         {
             InitializeComponent();
+
+            b_SwipeToLeft.BackColor = Color.FromArgb(0, b_SwipeToLeft.BackColor);
+            buttonsPanel.BackColor = Color.FromArgb(0, buttonsPanel.BackColor);
         }
 
         private void MainMenuForm_Load(object sender, EventArgs e)
