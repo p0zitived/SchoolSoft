@@ -26,9 +26,9 @@ C:\Users\Pc\Desktop\Git\SchoolSoft\bin\Debug\SchoolSoft.exe.config
 C:\Users\Pc\Desktop\Git\SchoolSoft\bin\Debug\SchoolSoft.exe
 C:\Users\Pc\Desktop\Git\SchoolSoft\bin\Debug\SchoolSoft.pdb
 C:\Users\Pc\Desktop\Git\SchoolSoft\obj\Debug\SchoolSoft.csprojAssemblyReference.cache
-C:\Users\Pc\Desktop\Git\SchoolSoft\obj\Debug\SchoolSoft.Form1.resources
 C:\Users\Pc\Desktop\Git\SchoolSoft\obj\Debug\SchoolSoft.Properties.Resources.resources
 C:\Users\Pc\Desktop\Git\SchoolSoft\obj\Debug\SchoolSoft.csproj.GenerateResource.cache
 C:\Users\Pc\Desktop\Git\SchoolSoft\obj\Debug\SchoolSoft.csproj.CoreCompileInputs.cache
 C:\Users\Pc\Desktop\Git\SchoolSoft\obj\Debug\SchoolSoft.exe
 C:\Users\Pc\Desktop\Git\SchoolSoft\obj\Debug\SchoolSoft.pdb
+C:\Users\Pc\Desktop\Git\SchoolSoft\obj\Debug\SchoolSoft.MainMenuForm.resources
