@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.buttonsPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.b_SituatiaCurenta = new System.Windows.Forms.Button();
+            this.b_Orar = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.b_SwipeToRight = new System.Windows.Forms.Button();
             this.b_SwipeToLeft = new System.Windows.Forms.Button();
-            this.b_SituatiaCurenta = new System.Windows.Forms.Button();
-            this.b_Orar = new System.Windows.Forms.Button();
             this.buttonsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,6 +48,27 @@
             this.buttonsPanel.Name = "buttonsPanel";
             this.buttonsPanel.Size = new System.Drawing.Size(6000, 471);
             this.buttonsPanel.TabIndex = 0;
+            // 
+            // b_SituatiaCurenta
+            // 
+            this.b_SituatiaCurenta.BackgroundImage = global::SchoolSoft.Properties.Resources.SituatiaCurenta;
+            this.b_SituatiaCurenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.b_SituatiaCurenta.Location = new System.Drawing.Point(3, 3);
+            this.b_SituatiaCurenta.Name = "b_SituatiaCurenta";
+            this.b_SituatiaCurenta.Size = new System.Drawing.Size(400, 400);
+            this.b_SituatiaCurenta.TabIndex = 0;
+            this.b_SituatiaCurenta.UseVisualStyleBackColor = true;
+            this.b_SituatiaCurenta.Click += new System.EventHandler(this.b_SituatiaCurenta_Click);
+            // 
+            // b_Orar
+            // 
+            this.b_Orar.BackgroundImage = global::SchoolSoft.Properties.Resources.Orar;
+            this.b_Orar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.b_Orar.Location = new System.Drawing.Point(409, 3);
+            this.b_Orar.Name = "b_Orar";
+            this.b_Orar.Size = new System.Drawing.Size(400, 400);
+            this.b_Orar.TabIndex = 1;
+            this.b_Orar.UseVisualStyleBackColor = true;
             // 
             // timer1
             // 
@@ -76,26 +97,6 @@
             this.b_SwipeToLeft.TabIndex = 2;
             this.b_SwipeToLeft.UseVisualStyleBackColor = true;
             this.b_SwipeToLeft.Click += new System.EventHandler(this.b_SwipeToLeft_Click);
-            // 
-            // b_SituatiaCurenta
-            // 
-            this.b_SituatiaCurenta.BackgroundImage = global::SchoolSoft.Properties.Resources.SituatiaCurenta;
-            this.b_SituatiaCurenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.b_SituatiaCurenta.Location = new System.Drawing.Point(3, 3);
-            this.b_SituatiaCurenta.Name = "b_SituatiaCurenta";
-            this.b_SituatiaCurenta.Size = new System.Drawing.Size(400, 400);
-            this.b_SituatiaCurenta.TabIndex = 0;
-            this.b_SituatiaCurenta.UseVisualStyleBackColor = true;
-            // 
-            // b_Orar
-            // 
-            this.b_Orar.BackgroundImage = global::SchoolSoft.Properties.Resources.Orar;
-            this.b_Orar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.b_Orar.Location = new System.Drawing.Point(409, 3);
-            this.b_Orar.Name = "b_Orar";
-            this.b_Orar.Size = new System.Drawing.Size(400, 400);
-            this.b_Orar.TabIndex = 1;
-            this.b_Orar.UseVisualStyleBackColor = true;
             // 
             // MainMenuForm
             // 

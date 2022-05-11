@@ -131,12 +131,16 @@ namespace SchoolSoft
             b_SwipeToRight.Enabled = false;
             b_SwipeToLeft.Enabled = false;
         }
-
         private void b_SwipeToLeft_Click(object sender, EventArgs e)
         {
             goRight = true;
             b_SwipeToRight.Enabled = false;
             b_SwipeToLeft.Enabled = false;
+        }
+
+        private void b_SituatiaCurenta_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
