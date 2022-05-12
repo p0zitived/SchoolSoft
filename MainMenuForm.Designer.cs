@@ -35,6 +35,7 @@
             this.b_SwipeToLeft = new System.Windows.Forms.Button();
             this.b_SituatiaCurenta = new System.Windows.Forms.Button();
             this.b_Orar = new System.Windows.Forms.Button();
+            this.b_Catalog = new System.Windows.Forms.Button();
             this.buttonsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,6 +44,7 @@
             this.buttonsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(18)))), ((int)(((byte)(109)))));
             this.buttonsPanel.Controls.Add(this.b_SituatiaCurenta);
             this.buttonsPanel.Controls.Add(this.b_Orar);
+            this.buttonsPanel.Controls.Add(this.b_Catalog);
             this.buttonsPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.buttonsPanel.Location = new System.Drawing.Point(200, 50);
             this.buttonsPanel.Name = "buttonsPanel";
@@ -98,6 +100,17 @@
             this.b_Orar.TabIndex = 1;
             this.b_Orar.UseVisualStyleBackColor = true;
             // 
+            // b_Catalog
+            // 
+            this.b_Catalog.BackgroundImage = global::SchoolSoft.Properties.Resources.Catalog;
+            this.b_Catalog.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.b_Catalog.Location = new System.Drawing.Point(815, 3);
+            this.b_Catalog.Name = "b_Catalog";
+            this.b_Catalog.Size = new System.Drawing.Size(400, 400);
+            this.b_Catalog.TabIndex = 2;
+            this.b_Catalog.UseVisualStyleBackColor = true;
+            this.b_Catalog.Click += new System.EventHandler(this.b_Catalog_Click);
+            // 
             // MainMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -126,6 +139,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button b_SwipeToLeft;
         private System.Windows.Forms.Button b_Orar;
+        private System.Windows.Forms.Button b_Catalog;
     }
 }
 

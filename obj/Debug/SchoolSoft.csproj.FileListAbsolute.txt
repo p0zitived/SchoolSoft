@@ -34,3 +34,4 @@ C:\Users\Pc\Desktop\Git\SchoolSoft\obj\Debug\SchoolSoft.MainMenuForm.resources
 C:\Users\User\Desktop\SchoolSoft\obj\Debug\SchoolSoft.MainMenuForm.resources
 C:\Users\User\Desktop\SchoolSoft\obj\Debug\SchoolSoft.SituatiaCurentaForm.resources
 C:\Users\Pc\Desktop\Git\SchoolSoft\obj\Debug\SchoolSoft.SituatiaCurentaForm.resources
+C:\Users\User\Desktop\SchoolSoft\obj\Debug\SchoolSoft.CatalogForm.resources

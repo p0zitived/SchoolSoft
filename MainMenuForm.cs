@@ -145,5 +145,11 @@ namespace SchoolSoft
             scf.Show();
             Hide();
         }
+
+        private void b_Catalog_Click(object sender, EventArgs e)
+        {
+            CatalogForm ctf = new CatalogForm(this, dbc.DS);
+            ctf.Show();
+        }
     }
 }
