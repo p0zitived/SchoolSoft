@@ -123,6 +123,7 @@
     <None Include="Resources\Orar.jpg" />
     <None Include="Resources\ArrowLeft.png" />
     <None Include="Resources\ArrowRight.png" />
+    <None Include="Resources\BlueFog.jpg" />
     <Content Include="SchoolDB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -143,6 +143,7 @@ namespace SchoolSoft
         {
             SituatiaCurentaForm scf = new SituatiaCurentaForm(this,dbc.DS.Students[100],dbc.DS.Disciplines);
             scf.Show();
+            Hide();
         }
     }
 }

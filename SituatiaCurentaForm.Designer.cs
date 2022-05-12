@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.l_Title = new System.Windows.Forms.Label();
             this.l_NumeAfis = new System.Windows.Forms.Label();
             this.l_Prenume = new System.Windows.Forms.Label();
             this.l_Data = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.fl_Base = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.l_PrenumeAfis = new System.Windows.Forms.Label();
             this.l_DataAfis = new System.Windows.Forms.Label();
@@ -41,20 +41,30 @@
             this.l_Diriginte = new System.Windows.Forms.Label();
             this.l_DiriginteAfis = new System.Windows.Forms.Label();
             this.fl_Disciplines = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.fl_Marks = new System.Windows.Forms.FlowLayoutPanel();
             this.l_Marks = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.flowLayoutPanel3.SuspendLayout();
+            this.fl_Restante = new System.Windows.Forms.FlowLayoutPanel();
+            this.l_Restante = new System.Windows.Forms.Label();
+            this.fl_Total = new System.Windows.Forms.FlowLayoutPanel();
+            this.l_MedTot = new System.Windows.Forms.Label();
+            this.l_AbsTot = new System.Windows.Forms.Label();
+            this.l_MedTotAfis = new System.Windows.Forms.Label();
+            this.l_AbsTotAfis = new System.Windows.Forms.Label();
+            this.fl_Base.SuspendLayout();
+            this.fl_Marks.SuspendLayout();
+            this.fl_Restante.SuspendLayout();
+            this.fl_Total.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // l_Title
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.label1.Location = new System.Drawing.Point(347, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(255, 51);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Situația curentă";
+            this.l_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.l_Title.ForeColor = System.Drawing.SystemColors.Control;
+            this.l_Title.Location = new System.Drawing.Point(347, 9);
+            this.l_Title.Name = "l_Title";
+            this.l_Title.Size = new System.Drawing.Size(255, 51);
+            this.l_Title.TabIndex = 0;
+            this.l_Title.Text = "Situația curentă";
             // 
             // l_NumeAfis
             // 
@@ -83,22 +93,24 @@
             this.l_Data.TabIndex = 3;
             this.l_Data.Text = "Data nașterii :";
             // 
-            // flowLayoutPanel1
+            // fl_Base
             // 
-            this.flowLayoutPanel1.Controls.Add(this.label2);
-            this.flowLayoutPanel1.Controls.Add(this.l_NumeAfis);
-            this.flowLayoutPanel1.Controls.Add(this.l_Prenume);
-            this.flowLayoutPanel1.Controls.Add(this.l_PrenumeAfis);
-            this.flowLayoutPanel1.Controls.Add(this.l_Data);
-            this.flowLayoutPanel1.Controls.Add(this.l_DataAfis);
-            this.flowLayoutPanel1.Controls.Add(this.l_Clasa);
-            this.flowLayoutPanel1.Controls.Add(this.l_ClasaAfis);
-            this.flowLayoutPanel1.Controls.Add(this.l_Diriginte);
-            this.flowLayoutPanel1.Controls.Add(this.l_DiriginteAfis);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(2, 50);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(369, 541);
-            this.flowLayoutPanel1.TabIndex = 4;
+            this.fl_Base.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(14)))), ((int)(((byte)(131)))));
+            this.fl_Base.Controls.Add(this.label2);
+            this.fl_Base.Controls.Add(this.l_NumeAfis);
+            this.fl_Base.Controls.Add(this.l_Prenume);
+            this.fl_Base.Controls.Add(this.l_PrenumeAfis);
+            this.fl_Base.Controls.Add(this.l_Data);
+            this.fl_Base.Controls.Add(this.l_DataAfis);
+            this.fl_Base.Controls.Add(this.l_Clasa);
+            this.fl_Base.Controls.Add(this.l_ClasaAfis);
+            this.fl_Base.Controls.Add(this.l_Diriginte);
+            this.fl_Base.Controls.Add(this.l_DiriginteAfis);
+            this.fl_Base.ForeColor = System.Drawing.SystemColors.Control;
+            this.fl_Base.Location = new System.Drawing.Point(2, 50);
+            this.fl_Base.Name = "fl_Base";
+            this.fl_Base.Size = new System.Drawing.Size(369, 342);
+            this.fl_Base.TabIndex = 4;
             // 
             // label2
             // 
@@ -166,19 +178,22 @@
             // fl_Disciplines
             // 
             this.fl_Disciplines.AutoScroll = true;
+            this.fl_Disciplines.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(21)))), ((int)(((byte)(139)))));
             this.fl_Disciplines.Location = new System.Drawing.Point(377, 50);
             this.fl_Disciplines.Name = "fl_Disciplines";
-            this.fl_Disciplines.Size = new System.Drawing.Size(522, 194);
+            this.fl_Disciplines.Size = new System.Drawing.Size(522, 160);
             this.fl_Disciplines.TabIndex = 5;
             // 
-            // flowLayoutPanel3
+            // fl_Marks
             // 
-            this.flowLayoutPanel3.AutoScroll = true;
-            this.flowLayoutPanel3.Controls.Add(this.l_Marks);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(377, 250);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(522, 341);
-            this.flowLayoutPanel3.TabIndex = 6;
+            this.fl_Marks.AutoScroll = true;
+            this.fl_Marks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(26)))), ((int)(((byte)(139)))));
+            this.fl_Marks.Controls.Add(this.l_Marks);
+            this.fl_Marks.ForeColor = System.Drawing.SystemColors.Control;
+            this.fl_Marks.Location = new System.Drawing.Point(377, 216);
+            this.fl_Marks.Name = "fl_Marks";
+            this.fl_Marks.Size = new System.Drawing.Size(522, 315);
+            this.fl_Marks.TabIndex = 6;
             // 
             // l_Marks
             // 
@@ -191,31 +206,112 @@
             this.l_Marks.TabIndex = 0;
             this.l_Marks.Text = "\r\n";
             // 
+            // fl_Restante
+            // 
+            this.fl_Restante.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(17)))), ((int)(((byte)(137)))));
+            this.fl_Restante.Controls.Add(this.l_Restante);
+            this.fl_Restante.ForeColor = System.Drawing.SystemColors.Control;
+            this.fl_Restante.Location = new System.Drawing.Point(2, 398);
+            this.fl_Restante.Name = "fl_Restante";
+            this.fl_Restante.Size = new System.Drawing.Size(369, 193);
+            this.fl_Restante.TabIndex = 7;
+            // 
+            // l_Restante
+            // 
+            this.l_Restante.AutoSize = true;
+            this.l_Restante.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.l_Restante.Location = new System.Drawing.Point(3, 0);
+            this.l_Restante.Name = "l_Restante";
+            this.l_Restante.Size = new System.Drawing.Size(105, 25);
+            this.l_Restante.TabIndex = 0;
+            this.l_Restante.Text = "Restanțe : ";
+            // 
+            // fl_Total
+            // 
+            this.fl_Total.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(35)))), ((int)(((byte)(141)))));
+            this.fl_Total.Controls.Add(this.l_MedTot);
+            this.fl_Total.Controls.Add(this.l_AbsTot);
+            this.fl_Total.Controls.Add(this.l_MedTotAfis);
+            this.fl_Total.Controls.Add(this.l_AbsTotAfis);
+            this.fl_Total.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.fl_Total.ForeColor = System.Drawing.SystemColors.Control;
+            this.fl_Total.Location = new System.Drawing.Point(637, 537);
+            this.fl_Total.Name = "fl_Total";
+            this.fl_Total.Size = new System.Drawing.Size(262, 54);
+            this.fl_Total.TabIndex = 8;
+            // 
+            // l_MedTot
+            // 
+            this.l_MedTot.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.l_MedTot.Location = new System.Drawing.Point(3, 0);
+            this.l_MedTot.Name = "l_MedTot";
+            this.l_MedTot.Size = new System.Drawing.Size(156, 23);
+            this.l_MedTot.TabIndex = 0;
+            this.l_MedTot.Text = "Media Totala :";
+            // 
+            // l_AbsTot
+            // 
+            this.l_AbsTot.AutoSize = true;
+            this.l_AbsTot.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.l_AbsTot.Location = new System.Drawing.Point(3, 23);
+            this.l_AbsTot.Name = "l_AbsTot";
+            this.l_AbsTot.Size = new System.Drawing.Size(156, 25);
+            this.l_AbsTot.TabIndex = 1;
+            this.l_AbsTot.Text = "Absente Totale :";
+            // 
+            // l_MedTotAfis
+            // 
+            this.l_MedTotAfis.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.l_MedTotAfis.Location = new System.Drawing.Point(165, 0);
+            this.l_MedTotAfis.Name = "l_MedTotAfis";
+            this.l_MedTotAfis.Size = new System.Drawing.Size(156, 23);
+            this.l_MedTotAfis.TabIndex = 2;
+            this.l_MedTotAfis.Text = "xxx,x";
+            // 
+            // l_AbsTotAfis
+            // 
+            this.l_AbsTotAfis.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.l_AbsTotAfis.Location = new System.Drawing.Point(165, 23);
+            this.l_AbsTotAfis.Name = "l_AbsTotAfis";
+            this.l_AbsTotAfis.Size = new System.Drawing.Size(156, 23);
+            this.l_AbsTotAfis.TabIndex = 3;
+            this.l_AbsTotAfis.Text = "y";
+            // 
             // SituatiaCurentaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(27)))), ((int)(((byte)(86)))));
+            this.BackgroundImage = global::SchoolSoft.Properties.Resources.BlueFog;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(911, 603);
-            this.Controls.Add(this.flowLayoutPanel3);
+            this.Controls.Add(this.fl_Total);
+            this.Controls.Add(this.fl_Marks);
             this.Controls.Add(this.fl_Disciplines);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.fl_Base);
+            this.Controls.Add(this.l_Title);
+            this.Controls.Add(this.fl_Restante);
             this.Name = "SituatiaCurentaForm";
             this.Text = "SituatiaCurentaForm";
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel3.ResumeLayout(false);
-            this.flowLayoutPanel3.PerformLayout();
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SituatiaCurentaForm_FormClosing);
+            this.fl_Base.ResumeLayout(false);
+            this.fl_Marks.ResumeLayout(false);
+            this.fl_Marks.PerformLayout();
+            this.fl_Restante.ResumeLayout(false);
+            this.fl_Restante.PerformLayout();
+            this.fl_Total.ResumeLayout(false);
+            this.fl_Total.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label l_Title;
         private System.Windows.Forms.Label l_NumeAfis;
         private System.Windows.Forms.Label l_Prenume;
         private System.Windows.Forms.Label l_Data;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel fl_Base;
         private System.Windows.Forms.Label l_Clasa;
         private System.Windows.Forms.Label l_Diriginte;
         private System.Windows.Forms.Label label2;
@@ -224,7 +320,14 @@
         private System.Windows.Forms.Label l_ClasaAfis;
         private System.Windows.Forms.Label l_DiriginteAfis;
         private System.Windows.Forms.FlowLayoutPanel fl_Disciplines;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.FlowLayoutPanel fl_Marks;
         private System.Windows.Forms.Label l_Marks;
+        private System.Windows.Forms.FlowLayoutPanel fl_Restante;
+        private System.Windows.Forms.Label l_Restante;
+        private System.Windows.Forms.FlowLayoutPanel fl_Total;
+        private System.Windows.Forms.Label l_MedTot;
+        private System.Windows.Forms.Label l_AbsTot;
+        private System.Windows.Forms.Label l_MedTotAfis;
+        private System.Windows.Forms.Label l_AbsTotAfis;
     }
 }
