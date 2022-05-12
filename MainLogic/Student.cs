@@ -10,6 +10,7 @@ namespace SchoolSoft.MainLogic
     {
         public List<DisciplineMarks> Marks { get; set; }
         public Group Group { get; set; }
+        public bool changed = false;
 
         // constructors
         public Student()

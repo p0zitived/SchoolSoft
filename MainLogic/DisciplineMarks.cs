@@ -30,6 +30,7 @@ namespace SchoolSoft.MainLogic
             s += "}";
             return s;
         }
+
         public int GetAbsences()
         {
             int a = 0;

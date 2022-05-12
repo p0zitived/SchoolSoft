@@ -41,7 +41,6 @@ namespace SchoolSoft
         {
             string _cnnString = DBC.GetConnectionString("SchoolDB.mdf");
             dbc = new DBC(_cnnString);
-            dbc.CloseConnection();
 
             calc_error = buttonsPanel.Margin.Right * 2;
             distance = buttonsPanel.Controls[0].Width;
@@ -141,15 +140,20 @@ namespace SchoolSoft
 
         private void b_SituatiaCurenta_Click(object sender, EventArgs e)
         {
-            SituatiaCurentaForm scf = new SituatiaCurentaForm(this,dbc.DS.Students[100],dbc.DS.Disciplines);
+            SituatiaCurentaForm scf = new SituatiaCurentaForm(this,dbc.DS.Students[0],dbc.DS.Disciplines);
             scf.Show();
             Hide();
         }
 
         private void b_Catalog_Click(object sender, EventArgs e)
         {
-            CatalogForm ctf = new CatalogForm(this, dbc.DS);
+            CatalogForm ctf = new CatalogForm(this, dbc);
             ctf.Show();
+        }
+
+        private void MainMenuForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            dbc.CloseConnection();
         }
     }
 }

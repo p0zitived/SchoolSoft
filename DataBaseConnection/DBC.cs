@@ -21,6 +21,7 @@ namespace SchoolSoft.DataBaseConnection
         {
             DS = new DataStorage();
             _sqlConnection = new SqlConnection(connectionString);
+            _sqlConnection.Open();
             _adapter = new SqlDataAdapter();
             _dataSet = new DataSet();
 
@@ -31,6 +32,7 @@ namespace SchoolSoft.DataBaseConnection
             fillDisciplineMarks();
         }
 
+        #region fills
         public void fillDisciplines()
         {
             SqlCommand command = new SqlCommand("Select* from Disciplines", _sqlConnection);
@@ -171,11 +173,55 @@ namespace SchoolSoft.DataBaseConnection
                 }
             }
         }
+        #endregion
 
         public void CloseConnection()
         {
             if (_sqlConnection != null)
                 _sqlConnection.Close();
+        }
+
+        public void SaveChangesInDB()
+        {
+            string sql_insert = "Insert into DisciplineMarks values ";
+            int countOfMarks;
+            int actual_countOfMarks = 0;
+
+            foreach (Student st in DS.Students)
+            {
+                if (st.changed)
+                {
+                    // calculam numarul de note
+                    countOfMarks = 0;
+                    actual_countOfMarks = 0;
+                    foreach (DisciplineMarks dm in st.Marks)
+                    {
+                        countOfMarks += dm.Marks.Count;
+                    }
+
+                    SqlCommand command = new SqlCommand($"Delete from DisciplineMarks where IDStudent={st.ID}",_sqlConnection);
+                    command.ExecuteNonQuery();
+
+                    foreach (DisciplineMarks disciplineMarks in st.Marks)
+                    {
+                        for (int i = 0;i<disciplineMarks.Marks.Count;i++)
+                        {
+                            sql_insert += $"({st.ID},{disciplineMarks.Discipline.ID},{disciplineMarks.Marks[i]})";
+                            actual_countOfMarks++;
+
+                            if (actual_countOfMarks == countOfMarks)
+                            {
+                                sql_insert += ";";
+                            }
+                            else sql_insert += ",";
+                        }
+                    }
+
+                    st.changed = false;
+                }
+            }
+            SqlCommand comm = new SqlCommand(sql_insert, _sqlConnection);
+            comm.ExecuteNonQuery();
         }
         public static string GetConnectionString(string db_name)
         {
