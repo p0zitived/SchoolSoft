@@ -99,6 +99,12 @@
     <Compile Include="SituatiaCurentaForm.Designer.cs">
       <DependentUpon>SituatiaCurentaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentStats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentStats.Designer.cs">
+      <DependentUpon>StudentStats.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CatalogForm.resx">
       <DependentUpon>CatalogForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +126,9 @@
     </Compile>
     <EmbeddedResource Include="SituatiaCurentaForm.resx">
       <DependentUpon>SituatiaCurentaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentStats.resx">
+      <DependentUpon>StudentStats.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

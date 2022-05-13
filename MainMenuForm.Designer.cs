@@ -34,6 +34,7 @@
             this.b_Orar = new System.Windows.Forms.Button();
             this.b_Catalog = new System.Windows.Forms.Button();
             this.b_Editare = new System.Windows.Forms.Button();
+            this.b_Stats = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.b_SwipeToRight = new System.Windows.Forms.Button();
             this.b_SwipeToLeft = new System.Windows.Forms.Button();
@@ -47,6 +48,7 @@
             this.buttonsPanel.Controls.Add(this.b_Orar);
             this.buttonsPanel.Controls.Add(this.b_Catalog);
             this.buttonsPanel.Controls.Add(this.b_Editare);
+            this.buttonsPanel.Controls.Add(this.b_Stats);
             this.buttonsPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.buttonsPanel.Location = new System.Drawing.Point(200, 50);
             this.buttonsPanel.Name = "buttonsPanel";
@@ -95,6 +97,17 @@
             this.b_Editare.TabIndex = 3;
             this.b_Editare.UseVisualStyleBackColor = true;
             this.b_Editare.Click += new System.EventHandler(this.b_Editare_Click);
+            // 
+            // b_Stats
+            // 
+            this.b_Stats.BackgroundImage = global::SchoolSoft.Properties.Resources.EditeazaElevi;
+            this.b_Stats.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.b_Stats.Location = new System.Drawing.Point(1627, 3);
+            this.b_Stats.Name = "b_Stats";
+            this.b_Stats.Size = new System.Drawing.Size(400, 400);
+            this.b_Stats.TabIndex = 4;
+            this.b_Stats.UseVisualStyleBackColor = true;
+            this.b_Stats.Click += new System.EventHandler(this.b_Stats_Click);
             // 
             // timer1
             // 
@@ -155,6 +168,7 @@
         private System.Windows.Forms.Button b_Orar;
         private System.Windows.Forms.Button b_Catalog;
         private System.Windows.Forms.Button b_Editare;
+        private System.Windows.Forms.Button b_Stats;
     }
 }
 

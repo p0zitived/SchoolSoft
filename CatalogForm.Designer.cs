@@ -187,6 +187,8 @@
             this.Controls.Add(this.l_Title);
             this.Controls.Add(this.fl_Disciplines);
             this.Controls.Add(this.tv_school);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "CatalogForm";
             this.Text = "CatalogForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CatalogForm_FormClosing);

@@ -183,6 +183,9 @@ namespace SchoolSoft.DataBaseConnection
 
         public void DeleteStudent(Student student)
         {
+            //stergem si in groups
+            student.Group.Students.Remove(student);
+
             for (int i=0;i<DS.Students.Count;i++)
             {
                 if (DS.Students[i].ID == student.ID)

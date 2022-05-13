@@ -161,6 +161,13 @@ namespace SchoolSoft
         {
             EditareForm ef = new EditareForm(this, dbc);
             ef.Show();
+            Hide();
+        }
+
+        private void b_Stats_Click(object sender, EventArgs e)
+        {
+            StudentStats ss = new StudentStats(this,dbc);
+            ss.Show();
         }
     }
 }

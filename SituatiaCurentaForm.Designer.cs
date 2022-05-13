@@ -291,6 +291,8 @@
             this.Controls.Add(this.fl_Base);
             this.Controls.Add(this.l_Title);
             this.Controls.Add(this.fl_Restante);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "SituatiaCurentaForm";
             this.Text = "SituatiaCurentaForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SituatiaCurentaForm_FormClosing);
