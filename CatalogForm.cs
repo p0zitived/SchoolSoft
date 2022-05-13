@@ -161,5 +161,10 @@ namespace SchoolSoft
                 MessageBox.Show("Selectati un elev si o disciplina","Nu a fost nimic selectat", MessageBoxButtons.OK, MessageBoxIcon.Question);
             }
         }
+
+        private void CatalogForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _menu.Show();
+        }
     }
 }

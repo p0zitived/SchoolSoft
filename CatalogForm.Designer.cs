@@ -189,6 +189,7 @@
             this.Controls.Add(this.tv_school);
             this.Name = "CatalogForm";
             this.Text = "CatalogForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CatalogForm_FormClosing);
             this.ResumeLayout(false);
 
         }

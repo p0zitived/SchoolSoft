@@ -73,6 +73,12 @@
     </Compile>
     <Compile Include="DataBaseConnection\DataStorage.cs" />
     <Compile Include="DataBaseConnection\DBC.cs" />
+    <Compile Include="EditareForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditareForm.Designer.cs">
+      <DependentUpon>EditareForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </Compile>
     <EmbeddedResource Include="CatalogForm.resx">
       <DependentUpon>CatalogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditareForm.resx">
+      <DependentUpon>EditareForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
@@ -134,6 +143,7 @@
     <None Include="Resources\ArrowRight.png" />
     <None Include="Resources\BlueFog.jpg" />
     <None Include="Resources\Catalog.png" />
+    <None Include="Resources\EditeazaElevi.jpg" />
     <Content Include="SchoolDB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

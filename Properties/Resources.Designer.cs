@@ -113,6 +113,16 @@ namespace SchoolSoft.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap EditeazaElevi {
+            get {
+                object obj = ResourceManager.GetObject("EditeazaElevi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap forest_bg {
             get {
                 object obj = ResourceManager.GetObject("forest_bg", resourceCulture);

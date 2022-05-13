@@ -33,6 +33,7 @@
             this.b_SituatiaCurenta = new System.Windows.Forms.Button();
             this.b_Orar = new System.Windows.Forms.Button();
             this.b_Catalog = new System.Windows.Forms.Button();
+            this.b_Editare = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.b_SwipeToRight = new System.Windows.Forms.Button();
             this.b_SwipeToLeft = new System.Windows.Forms.Button();
@@ -45,6 +46,7 @@
             this.buttonsPanel.Controls.Add(this.b_SituatiaCurenta);
             this.buttonsPanel.Controls.Add(this.b_Orar);
             this.buttonsPanel.Controls.Add(this.b_Catalog);
+            this.buttonsPanel.Controls.Add(this.b_Editare);
             this.buttonsPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.buttonsPanel.Location = new System.Drawing.Point(200, 50);
             this.buttonsPanel.Name = "buttonsPanel";
@@ -82,6 +84,17 @@
             this.b_Catalog.TabIndex = 2;
             this.b_Catalog.UseVisualStyleBackColor = true;
             this.b_Catalog.Click += new System.EventHandler(this.b_Catalog_Click);
+            // 
+            // b_Editare
+            // 
+            this.b_Editare.BackgroundImage = global::SchoolSoft.Properties.Resources.EditeazaElevi;
+            this.b_Editare.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.b_Editare.Location = new System.Drawing.Point(1221, 3);
+            this.b_Editare.Name = "b_Editare";
+            this.b_Editare.Size = new System.Drawing.Size(400, 400);
+            this.b_Editare.TabIndex = 3;
+            this.b_Editare.UseVisualStyleBackColor = true;
+            this.b_Editare.Click += new System.EventHandler(this.b_Editare_Click);
             // 
             // timer1
             // 
@@ -141,6 +154,7 @@
         private System.Windows.Forms.Button b_SwipeToLeft;
         private System.Windows.Forms.Button b_Orar;
         private System.Windows.Forms.Button b_Catalog;
+        private System.Windows.Forms.Button b_Editare;
     }
 }
 

@@ -28,13 +28,7 @@ namespace SchoolSoft.MainLogic
 
         public override string ToString()
         {
-            string s = GroupYear+ "" + GroupLetter + " " + ClassMaster.Surname + " " + ClassMaster.Name +  " Elevi{";
-            foreach (Student st in Students)
-            {
-                s += st.Surname + " " + st.Name;
-            }
-            s += "}";
-            return s;
+            return GroupYear + " " + GroupLetter;
         }
     }
 }

@@ -149,11 +149,18 @@ namespace SchoolSoft
         {
             CatalogForm ctf = new CatalogForm(this, dbc);
             ctf.Show();
+            Hide();
         }
 
         private void MainMenuForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             dbc.CloseConnection();
+        }
+
+        private void b_Editare_Click(object sender, EventArgs e)
+        {
+            EditareForm ef = new EditareForm(this, dbc);
+            ef.Show();
         }
     }
 }

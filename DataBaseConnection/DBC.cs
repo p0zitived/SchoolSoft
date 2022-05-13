@@ -181,6 +181,21 @@ namespace SchoolSoft.DataBaseConnection
                 _sqlConnection.Close();
         }
 
+        public void DeleteStudent(Student student)
+        {
+            for (int i=0;i<DS.Students.Count;i++)
+            {
+                if (DS.Students[i].ID == student.ID)
+                {
+                    DS.Students[i].Marks.Clear();
+                    DS.Students[i].changed = true;
+                    SaveChangesInDB();
+                    DS.Students.RemoveAt(i);
+                }
+            }
+            SqlCommand command = new SqlCommand($"Delete from Students where ID = {student.ID}", _sqlConnection);
+            command.ExecuteNonQuery();
+        }
         public void SaveChangesInDB()
         {
             string sql_insert = "Insert into DisciplineMarks values ";
@@ -217,11 +232,30 @@ namespace SchoolSoft.DataBaseConnection
                         }
                     }
 
+                    if (st.Marks.Count == 0)
+                    {
+                        sql_insert = "";
+                    }
                     st.changed = false;
                 }
             }
-            SqlCommand comm = new SqlCommand(sql_insert, _sqlConnection);
-            comm.ExecuteNonQuery();
+            if (sql_insert != "")
+            {
+                SqlCommand comm = new SqlCommand(sql_insert, _sqlConnection);
+                comm.ExecuteNonQuery();
+            }
+        }
+        public void UpdateStudentInDB(Student student)
+        {
+            string sql_isert = $"Update Students Set IDGroup = {student.Group.ID}, StudentName = '{student.Name}',StudentSurname = '{student.Surname}',BirthDate = '{student.Date.ToString("yyyy-MM-dd")}' where ID = {student.ID}";
+            SqlCommand command = new SqlCommand(sql_isert, _sqlConnection);
+            command.ExecuteNonQuery();
+        }
+        public void AddNewStudent(Student student)
+        {
+            string sql_insert = $"Insert into Students Values ({student.ID},{student.Group.ID},'{student.Name}','{student.Surname}','{student.Date.ToString("yyyy-MM-dd")}');";
+            SqlCommand command = new SqlCommand(sql_insert, _sqlConnection);
+            command.ExecuteNonQuery();
         }
         public static string GetConnectionString(string db_name)
         {
