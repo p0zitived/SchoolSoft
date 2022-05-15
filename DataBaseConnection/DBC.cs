@@ -265,6 +265,12 @@ namespace SchoolSoft.DataBaseConnection
             SqlCommand command = new SqlCommand(sql_insert, _sqlConnection);
             command.ExecuteNonQuery();
         }
+        public void AddNewGroup(Group group)
+        {
+            string sql_insert = $"Insert into Groups(ID,GroupYear,GroupLetter) Values ({group.ID},{group.GroupYear},'{group.GroupLetter}',{group.ClassMaster.ID});";
+            SqlCommand command = new SqlCommand(sql_insert, _sqlConnection);
+            command.ExecuteNonQuery();
+        }
         public static string GetConnectionString(string db_name)
         {
             // Environment.CurrentDirectory -> returneaza drumul spre fisierul .exe care se afla in ..\bin\Debug . Prin metoda Replace schimbam bin\Debug cu numele la DB si asta se primeste connectionString

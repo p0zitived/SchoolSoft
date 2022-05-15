@@ -28,8 +28,30 @@ namespace SchoolSoft
 
             setUpTreeView();
             setUpComboBox();
+            setUpTeacherComboBox();
+            hideCreateGroup();
         }
 
+        private void hideCreateGroup()
+        {
+            l_Letter.Visible = false;
+            l_Year.Visible = false;
+            cb_Letter.Visible = false;
+            cb_Year.Visible = false;
+            b_Create.Visible = false;
+            cb_Teachers.Visible = false;
+            l_Teacher.Visible = false;
+        }
+        private void showCreateGroup()
+        {
+            l_Letter.Visible = true;
+            l_Year.Visible = true;
+            cb_Letter.Visible = true;
+            cb_Year.Visible = true;
+            b_Create.Visible = true;
+            cb_Teachers.Visible = true;
+            l_Teacher.Visible = true;
+        }
         private void setUpTreeView()
         {
             tv_school.BeginUpdate();
@@ -55,6 +77,13 @@ namespace SchoolSoft
             foreach (Group g in _dbc.DS.Groups)
             {
                 cb_Grupa.Items.Add(g);
+            }
+        }
+        private void setUpTeacherComboBox()
+        {
+            foreach (Teacher t in _dbc.DS.Teachers)
+            {
+                cb_Teachers.Items.Add(t);
             }
         }
 
@@ -161,6 +190,47 @@ namespace SchoolSoft
         private void EditareForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             _menu.Show();
+        }
+
+        private void b_CreateGroup_Click(object sender, EventArgs e)
+        {
+            showCreateGroup();
+        }
+
+        private void b_Create_Click(object sender, EventArgs e)
+        {
+            bool existsSameGroup = false;
+            foreach (Group g in _dbc.DS.Groups)
+            {
+                if (g.GroupYear == (int) cb_Year.SelectedItem && g.GroupLetter == char.Parse((string) cb_Letter.SelectedItem))
+                {
+                    existsSameGroup = true;
+                }
+            }
+
+            if (!existsSameGroup)
+            {
+                Group g = new Group();
+                g.GroupYear =(int) cb_Year.SelectedItem;
+                g.GroupLetter = (char)cb_Letter.SelectedItem;
+                g.ClassMaster =(Teacher) cb_Teachers.SelectedItem;
+
+                int id = 0;
+                foreach (Group gr in _dbc.DS.Groups)
+                {
+                    if (gr.ID > id)
+                    {
+                        id = gr.ID;
+                    }
+                }
+                id += 1;
+                g.ID = id;
+
+                _dbc.AddNewGroup(g);
+            } else
+            {
+                MessageBox.Show("O astfel grupa exista deja !");
+            }
         }
     }
 }

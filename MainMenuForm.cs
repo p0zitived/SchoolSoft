@@ -156,7 +156,7 @@ namespace SchoolSoft
 
         private void b_SituatiaCurenta_Click(object sender, EventArgs e)
         {
-            SituatiaCurentaForm scf = new SituatiaCurentaForm(this,dbc.DS.Students[0],dbc.DS.Disciplines);
+            SituatiaCurentaForm scf = new SituatiaCurentaForm(this,dbc);
             scf.Show();
             Hide();
         }
@@ -171,7 +171,7 @@ namespace SchoolSoft
         private void MainMenuForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             dbc.CloseConnection();
-            auth.Close();
+            auth.Show();
         }
 
         private void b_Editare_Click(object sender, EventArgs e)

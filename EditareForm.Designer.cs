@@ -43,6 +43,14 @@
             this.l_SelectedStud = new System.Windows.Forms.Label();
             this.b_Deselect = new System.Windows.Forms.Button();
             this.b_Add = new System.Windows.Forms.Button();
+            this.b_CreateGroup = new System.Windows.Forms.Button();
+            this.cb_Letter = new System.Windows.Forms.ComboBox();
+            this.l_Letter = new System.Windows.Forms.Label();
+            this.cb_Year = new System.Windows.Forms.ComboBox();
+            this.l_Year = new System.Windows.Forms.Label();
+            this.b_Create = new System.Windows.Forms.Button();
+            this.cb_Teachers = new System.Windows.Forms.ComboBox();
+            this.l_Teacher = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // l_title
@@ -192,11 +200,136 @@
             this.b_Add.UseVisualStyleBackColor = true;
             this.b_Add.Click += new System.EventHandler(this.b_Add_Click);
             // 
+            // b_CreateGroup
+            // 
+            this.b_CreateGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.b_CreateGroup.Location = new System.Drawing.Point(575, 181);
+            this.b_CreateGroup.Name = "b_CreateGroup";
+            this.b_CreateGroup.Size = new System.Drawing.Size(143, 28);
+            this.b_CreateGroup.TabIndex = 17;
+            this.b_CreateGroup.Text = "Creaza una noua";
+            this.b_CreateGroup.UseVisualStyleBackColor = true;
+            this.b_CreateGroup.Click += new System.EventHandler(this.b_CreateGroup_Click);
+            // 
+            // cb_Letter
+            // 
+            this.cb_Letter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_Letter.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.cb_Letter.FormattingEnabled = true;
+            this.cb_Letter.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "K",
+            "L",
+            "M",
+            "N",
+            "O",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T",
+            "I",
+            "U",
+            "V",
+            "W",
+            "X",
+            "Y"});
+            this.cb_Letter.Location = new System.Drawing.Point(689, 249);
+            this.cb_Letter.Name = "cb_Letter";
+            this.cb_Letter.Size = new System.Drawing.Size(139, 28);
+            this.cb_Letter.TabIndex = 21;
+            // 
+            // l_Letter
+            // 
+            this.l_Letter.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.l_Letter.Location = new System.Drawing.Point(609, 249);
+            this.l_Letter.Name = "l_Letter";
+            this.l_Letter.Size = new System.Drawing.Size(74, 28);
+            this.l_Letter.TabIndex = 20;
+            this.l_Letter.Text = "Litera :";
+            // 
+            // cb_Year
+            // 
+            this.cb_Year.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_Year.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.cb_Year.FormattingEnabled = true;
+            this.cb_Year.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.cb_Year.Location = new System.Drawing.Point(689, 215);
+            this.cb_Year.Name = "cb_Year";
+            this.cb_Year.Size = new System.Drawing.Size(139, 28);
+            this.cb_Year.TabIndex = 19;
+            // 
+            // l_Year
+            // 
+            this.l_Year.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.l_Year.Location = new System.Drawing.Point(618, 215);
+            this.l_Year.Name = "l_Year";
+            this.l_Year.Size = new System.Drawing.Size(65, 31);
+            this.l_Year.TabIndex = 18;
+            this.l_Year.Text = "Anul :";
+            // 
+            // b_Create
+            // 
+            this.b_Create.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.b_Create.Location = new System.Drawing.Point(689, 315);
+            this.b_Create.Name = "b_Create";
+            this.b_Create.Size = new System.Drawing.Size(139, 28);
+            this.b_Create.TabIndex = 22;
+            this.b_Create.Text = "Creaza";
+            this.b_Create.UseVisualStyleBackColor = true;
+            this.b_Create.Click += new System.EventHandler(this.b_Create_Click);
+            // 
+            // cb_Teachers
+            // 
+            this.cb_Teachers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_Teachers.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.cb_Teachers.FormattingEnabled = true;
+            this.cb_Teachers.Location = new System.Drawing.Point(689, 281);
+            this.cb_Teachers.Name = "cb_Teachers";
+            this.cb_Teachers.Size = new System.Drawing.Size(139, 28);
+            this.cb_Teachers.TabIndex = 24;
+            // 
+            // l_Teacher
+            // 
+            this.l_Teacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.l_Teacher.Location = new System.Drawing.Point(584, 281);
+            this.l_Teacher.Name = "l_Teacher";
+            this.l_Teacher.Size = new System.Drawing.Size(108, 28);
+            this.l_Teacher.TabIndex = 23;
+            this.l_Teacher.Text = "Profesor :";
+            // 
             // EditareForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(907, 496);
+            this.Controls.Add(this.cb_Teachers);
+            this.Controls.Add(this.l_Teacher);
+            this.Controls.Add(this.b_Create);
+            this.Controls.Add(this.cb_Letter);
+            this.Controls.Add(this.l_Letter);
+            this.Controls.Add(this.cb_Year);
+            this.Controls.Add(this.l_Year);
+            this.Controls.Add(this.b_CreateGroup);
             this.Controls.Add(this.b_Add);
             this.Controls.Add(this.b_Deselect);
             this.Controls.Add(this.l_SelectedStud);
@@ -239,5 +372,13 @@
         private System.Windows.Forms.Label l_SelectedStud;
         private System.Windows.Forms.Button b_Deselect;
         private System.Windows.Forms.Button b_Add;
+        private System.Windows.Forms.Button b_CreateGroup;
+        private System.Windows.Forms.ComboBox cb_Letter;
+        private System.Windows.Forms.Label l_Letter;
+        private System.Windows.Forms.ComboBox cb_Year;
+        private System.Windows.Forms.Label l_Year;
+        private System.Windows.Forms.Button b_Create;
+        private System.Windows.Forms.ComboBox cb_Teachers;
+        private System.Windows.Forms.Label l_Teacher;
     }
 }
