@@ -26,6 +26,15 @@ namespace SchoolSoft.MainLogic
             Students = new List<Student>();
         }
 
+        public int GetAbsences()
+        {
+            int count = 0;
+            foreach (Student s in Students)
+            {
+                count += s.GetAbsences();
+            }
+            return count;
+        }
         public override string ToString()
         {
             return GroupYear + " " + GroupLetter;

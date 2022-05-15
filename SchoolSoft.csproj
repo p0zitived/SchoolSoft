@@ -153,6 +153,7 @@
     <None Include="Resources\BlueFog.jpg" />
     <None Include="Resources\Catalog.png" />
     <None Include="Resources\EditeazaElevi.jpg" />
+    <None Include="Resources\TopButton.jpg" />
     <Content Include="SchoolDB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

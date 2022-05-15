@@ -172,6 +172,11 @@ namespace SchoolSoft.DataBaseConnection
                     _dataSet.Tables.Clear();
                 }
             }
+
+            foreach (Student s in DS.Students)
+            {
+                s.Group.Students.Add(s);
+            }
         }
         #endregion
 

@@ -167,6 +167,7 @@ namespace SchoolSoft
         private void b_Stats_Click(object sender, EventArgs e)
         {
             StudentStats ss = new StudentStats(this,dbc);
+            Hide();
             ss.Show();
         }
     }
