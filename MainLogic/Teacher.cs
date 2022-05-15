@@ -6,25 +6,25 @@ using System.Threading.Tasks;
 
 namespace SchoolSoft.MainLogic
 {
-    class Teacher : Person
+    public class Teacher : Person
     {
-        public Discipline Item { get; set; }
+        public Discipline Discipline { get; set; }
         public float Salary { get; set; }
 
         // constructors
         public Teacher(Discipline item)
         {
-            Item = item;
+            Discipline = item;
         }
         public Teacher() { }
         public Teacher(string name,string surname,DateTime date) : base(name,surname,date) { }
-        public Teacher(string name,string surname,DateTime date,Discipline item) : base(name, surname, date) { Item = item; }
+        public Teacher(string name,string surname,DateTime date,Discipline item) : base(name, surname, date) { Discipline = item; }
         public Teacher(string name, string surname) : base(name, surname) { }
-        public Teacher(int id, string name, string surname, DateTime date, Discipline item) : base(id,name, surname, date) { Item = item; }
+        public Teacher(int id, string name, string surname, DateTime date, Discipline item) : base(id,name, surname, date) { Discipline = item; }
 
         public override string ToString()
         {
-            return base.ToString() + Item.ToString();
+            return base.ToString() + Discipline.ToString();
         }
     }
 }

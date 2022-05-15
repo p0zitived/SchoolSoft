@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace SchoolSoft.MainLogic
 {
-    class Student : Person
+    public class Student : Person
     {
         public List<DisciplineMarks> Marks { get; set; }
         public Group Group { get; set; }
+        public bool changed = false;
 
         // constructors
         public Student()
@@ -52,7 +53,7 @@ namespace SchoolSoft.MainLogic
                 sum += dm.GetAverage();
                 count++;
             }
-            return (float)(sum / count);
+            return (float)((float)sum / (float)count);
         }
     }
 }

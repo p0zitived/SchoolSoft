@@ -49,7 +49,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -63,13 +65,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountHandler\Account.cs" />
-    <Compile Include="DataBaseConnection\DataStorage.cs" />
-    <Compile Include="DataBaseConnection\DBC.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="CatalogForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="CatalogForm.Designer.cs">
+      <DependentUpon>CatalogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseConnection\DataStorage.cs" />
+    <Compile Include="DataBaseConnection\DBC.cs" />
+    <Compile Include="EditareForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditareForm.Designer.cs">
+      <DependentUpon>EditareForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenuForm.Designer.cs">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainLogic\Group.cs" />
     <Compile Include="MainLogic\Person.cs" />
@@ -79,8 +93,26 @@
     <Compile Include="MainLogic\Teacher.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="SituatiaCurentaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SituatiaCurentaForm.Designer.cs">
+      <DependentUpon>SituatiaCurentaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentStats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentStats.Designer.cs">
+      <DependentUpon>StudentStats.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CatalogForm.resx">
+      <DependentUpon>CatalogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditareForm.resx">
+      <DependentUpon>EditareForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenuForm.resx">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -92,6 +124,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SituatiaCurentaForm.resx">
+      <DependentUpon>SituatiaCurentaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentStats.resx">
+      <DependentUpon>StudentStats.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -106,6 +144,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\background_1.jpg" />
+    <None Include="Resources\forest_bg.jpg" />
+    <None Include="Resources\SituatiaCurenta.jpg" />
+    <None Include="Resources\Orar.jpg" />
+    <None Include="Resources\ArrowLeft.png" />
+    <None Include="Resources\ArrowRight.png" />
+    <None Include="Resources\BlueFog.jpg" />
+    <None Include="Resources\Catalog.png" />
+    <None Include="Resources\EditeazaElevi.jpg" />
+    <None Include="Resources\TopButton.jpg" />
     <Content Include="SchoolDB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SchoolSoft.MainLogic
 {
-    class Group
+    public class Group
     {
         public int ID { get; set; }
         public char GroupLetter { get; set; }
@@ -26,15 +26,18 @@ namespace SchoolSoft.MainLogic
             Students = new List<Student>();
         }
 
+        public int GetAbsences()
+        {
+            int count = 0;
+            foreach (Student s in Students)
+            {
+                count += s.GetAbsences();
+            }
+            return count;
+        }
         public override string ToString()
         {
-            string s = GroupYear+ "" + GroupLetter + " " + ClassMaster.Surname + " " + ClassMaster.Name +  " Elevi{";
-            foreach (Student st in Students)
-            {
-                s += st.Surname + " " + st.Name;
-            }
-            s += "}";
-            return s;
+            return GroupYear + " " + GroupLetter;
         }
     }
 }

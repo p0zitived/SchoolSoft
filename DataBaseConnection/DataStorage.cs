@@ -7,7 +7,7 @@ using SchoolSoft.MainLogic;
 
 namespace SchoolSoft.DataBaseConnection
 {
-    class DataStorage
+    public class DataStorage
     {
         public List<Student> Students { get; set; }
         public List<Teacher> Teachers { get; set; }
@@ -65,6 +65,18 @@ namespace SchoolSoft.DataBaseConnection
                 if (Students[i].ID == id)
                 {
                     return Students[i];
+                }
+            }
+
+            return null;
+        }
+        public Discipline GetDisciplineByName(string name)
+        {
+            for (int i = 0; i < Disciplines.Count; i++)
+            {
+                if (Disciplines[i].Name == name)
+                {
+                    return Disciplines[i];
                 }
             }
 

@@ -10,7 +10,7 @@ using SchoolSoft.MainLogic;
 
 namespace SchoolSoft.DataBaseConnection
 {
-    class DBC
+    public class DBC
     {
         public DataStorage DS { get; set; }
         private SqlConnection _sqlConnection;
@@ -21,6 +21,7 @@ namespace SchoolSoft.DataBaseConnection
         {
             DS = new DataStorage();
             _sqlConnection = new SqlConnection(connectionString);
+            _sqlConnection.Open();
             _adapter = new SqlDataAdapter();
             _dataSet = new DataSet();
 
@@ -31,6 +32,7 @@ namespace SchoolSoft.DataBaseConnection
             fillDisciplineMarks();
         }
 
+        #region fills
         public void fillDisciplines()
         {
             SqlCommand command = new SqlCommand("Select* from Disciplines", _sqlConnection);
@@ -126,6 +128,18 @@ namespace SchoolSoft.DataBaseConnection
             }
 
             _dataSet.Tables.Clear();
+
+            // adaugam lista studentilor la fiecare grupa
+            foreach (Group group in DS.Groups)
+            {
+                foreach (Student student in DS.Students)
+                {
+                    if (student.Group == group)
+                    {
+                        group.Students.Add(student);
+                    }
+                }
+            }
         }
         public void fillDisciplineMarks()
         {
@@ -158,12 +172,98 @@ namespace SchoolSoft.DataBaseConnection
                     _dataSet.Tables.Clear();
                 }
             }
+
+            foreach (Student s in DS.Students)
+            {
+                s.Group.Students.Add(s);
+            }
         }
+        #endregion
 
         public void CloseConnection()
         {
             if (_sqlConnection != null)
                 _sqlConnection.Close();
+        }
+
+        public void DeleteStudent(Student student)
+        {
+            //stergem si in groups
+            student.Group.Students.Remove(student);
+
+            for (int i=0;i<DS.Students.Count;i++)
+            {
+                if (DS.Students[i].ID == student.ID)
+                {
+                    DS.Students[i].Marks.Clear();
+                    DS.Students[i].changed = true;
+                    SaveChangesInDB();
+                    DS.Students.RemoveAt(i);
+                }
+            }
+            SqlCommand command = new SqlCommand($"Delete from Students where ID = {student.ID}", _sqlConnection);
+            command.ExecuteNonQuery();
+        }
+        public void SaveChangesInDB()
+        {
+            string sql_insert = "Insert into DisciplineMarks values ";
+            int countOfMarks;
+            int actual_countOfMarks = 0;
+
+            foreach (Student st in DS.Students)
+            {
+                if (st.changed)
+                {
+                    // calculam numarul de note
+                    countOfMarks = 0;
+                    actual_countOfMarks = 0;
+                    foreach (DisciplineMarks dm in st.Marks)
+                    {
+                        countOfMarks += dm.Marks.Count;
+                    }
+
+                    SqlCommand command = new SqlCommand($"Delete from DisciplineMarks where IDStudent={st.ID}",_sqlConnection);
+                    command.ExecuteNonQuery();
+
+                    foreach (DisciplineMarks disciplineMarks in st.Marks)
+                    {
+                        for (int i = 0;i<disciplineMarks.Marks.Count;i++)
+                        {
+                            sql_insert += $"({st.ID},{disciplineMarks.Discipline.ID},{disciplineMarks.Marks[i]})";
+                            actual_countOfMarks++;
+
+                            if (actual_countOfMarks == countOfMarks)
+                            {
+                                sql_insert += ";";
+                            }
+                            else sql_insert += ",";
+                        }
+                    }
+
+                    if (st.Marks.Count == 0)
+                    {
+                        sql_insert = "";
+                    }
+                    st.changed = false;
+                }
+            }
+            if (sql_insert != "")
+            {
+                SqlCommand comm = new SqlCommand(sql_insert, _sqlConnection);
+                comm.ExecuteNonQuery();
+            }
+        }
+        public void UpdateStudentInDB(Student student)
+        {
+            string sql_isert = $"Update Students Set IDGroup = {student.Group.ID}, StudentName = '{student.Name}',StudentSurname = '{student.Surname}',BirthDate = '{student.Date.ToString("yyyy-MM-dd")}' where ID = {student.ID}";
+            SqlCommand command = new SqlCommand(sql_isert, _sqlConnection);
+            command.ExecuteNonQuery();
+        }
+        public void AddNewStudent(Student student)
+        {
+            string sql_insert = $"Insert into Students Values ({student.ID},{student.Group.ID},'{student.Name}','{student.Surname}','{student.Date.ToString("yyyy-MM-dd")}');";
+            SqlCommand command = new SqlCommand(sql_insert, _sqlConnection);
+            command.ExecuteNonQuery();
         }
         public static string GetConnectionString(string db_name)
         {

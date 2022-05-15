@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SchoolSoft.MainLogic
 {
-    class DisciplineMarks
+    public class DisciplineMarks
     {
         public Discipline Discipline { get; set; }
         public List<int> Marks { get; set; }
@@ -30,6 +30,7 @@ namespace SchoolSoft.MainLogic
             s += "}";
             return s;
         }
+
         public int GetAbsences()
         {
             int a = 0;
@@ -53,7 +54,9 @@ namespace SchoolSoft.MainLogic
                     count++;
                 }
             }
-            return (float) (sum / count);
+            if (count != 0)
+                return (float) ((float) sum / (float)count);
+            return 0;
         }
     }
 }
