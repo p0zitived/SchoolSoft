@@ -13,6 +13,7 @@ namespace SchoolSoft
 {
     public partial class MainMenuForm : Form
     {
+        AuthenticationForm auth;
         #region move buttons
         private bool goRight = false;
         private bool goLeft = false;
@@ -29,12 +30,27 @@ namespace SchoolSoft
         private DBC dbc;
         #endregion
 
-        public MainMenuForm()
+        public MainMenuForm(AuthenticationForm a,string permision)
         {
+            auth = a;
             InitializeComponent();
 
             b_SwipeToLeft.BackColor = Color.FromArgb(0, b_SwipeToLeft.BackColor);
             buttonsPanel.BackColor = Color.FromArgb(0, buttonsPanel.BackColor);
+
+            if (permision == "Director")
+            {
+                buttonsPanel.Controls.Remove(b_SituatiaCurenta);
+            }
+            else if (permision == "Teacher")
+            {
+                buttonsPanel.Controls.Remove(b_Editare);
+                buttonsPanel.Controls.Remove(b_SituatiaCurenta);
+            } else
+            {
+                buttonsPanel.Controls.Remove(b_Catalog);
+                buttonsPanel.Controls.Remove(b_Editare);
+            }
         }
 
         private void MainMenuForm_Load(object sender, EventArgs e)
@@ -140,7 +156,7 @@ namespace SchoolSoft
 
         private void b_SituatiaCurenta_Click(object sender, EventArgs e)
         {
-            SituatiaCurentaForm scf = new SituatiaCurentaForm(this,dbc.DS.Students[0],dbc.DS.Disciplines);
+            SituatiaCurentaForm scf = new SituatiaCurentaForm(this,dbc);
             scf.Show();
             Hide();
         }
@@ -155,6 +171,7 @@ namespace SchoolSoft
         private void MainMenuForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             dbc.CloseConnection();
+            auth.Show();
         }
 
         private void b_Editare_Click(object sender, EventArgs e)

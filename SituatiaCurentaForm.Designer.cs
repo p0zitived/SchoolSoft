@@ -50,6 +50,7 @@
             this.l_AbsTot = new System.Windows.Forms.Label();
             this.l_MedTotAfis = new System.Windows.Forms.Label();
             this.l_AbsTotAfis = new System.Windows.Forms.Label();
+            this.tv_school = new System.Windows.Forms.TreeView();
             this.fl_Base.SuspendLayout();
             this.fl_Marks.SuspendLayout();
             this.fl_Restante.SuspendLayout();
@@ -60,7 +61,7 @@
             // 
             this.l_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
             this.l_Title.ForeColor = System.Drawing.SystemColors.Control;
-            this.l_Title.Location = new System.Drawing.Point(347, 9);
+            this.l_Title.Location = new System.Drawing.Point(487, 9);
             this.l_Title.Name = "l_Title";
             this.l_Title.Size = new System.Drawing.Size(255, 51);
             this.l_Title.TabIndex = 0;
@@ -73,7 +74,6 @@
             this.l_NumeAfis.Name = "l_NumeAfis";
             this.l_NumeAfis.Size = new System.Drawing.Size(166, 40);
             this.l_NumeAfis.TabIndex = 1;
-            this.l_NumeAfis.Text = "Vasilescu";
             // 
             // l_Prenume
             // 
@@ -128,7 +128,6 @@
             this.l_PrenumeAfis.Name = "l_PrenumeAfis";
             this.l_PrenumeAfis.Size = new System.Drawing.Size(166, 40);
             this.l_PrenumeAfis.TabIndex = 7;
-            this.l_PrenumeAfis.Text = "Vasile";
             // 
             // l_DataAfis
             // 
@@ -137,7 +136,6 @@
             this.l_DataAfis.Name = "l_DataAfis";
             this.l_DataAfis.Size = new System.Drawing.Size(166, 40);
             this.l_DataAfis.TabIndex = 8;
-            this.l_DataAfis.Text = "yyyy-mm-dd";
             // 
             // l_Clasa
             // 
@@ -155,7 +153,6 @@
             this.l_ClasaAfis.Name = "l_ClasaAfis";
             this.l_ClasaAfis.Size = new System.Drawing.Size(166, 40);
             this.l_ClasaAfis.TabIndex = 9;
-            this.l_ClasaAfis.Text = "12 A";
             // 
             // l_Diriginte
             // 
@@ -173,7 +170,6 @@
             this.l_DiriginteAfis.Name = "l_DiriginteAfis";
             this.l_DiriginteAfis.Size = new System.Drawing.Size(166, 40);
             this.l_DiriginteAfis.TabIndex = 10;
-            this.l_DiriginteAfis.Text = "Luncaru";
             // 
             // fl_Disciplines
             // 
@@ -266,7 +262,6 @@
             this.l_MedTotAfis.Name = "l_MedTotAfis";
             this.l_MedTotAfis.Size = new System.Drawing.Size(156, 23);
             this.l_MedTotAfis.TabIndex = 2;
-            this.l_MedTotAfis.Text = "xxx,x";
             // 
             // l_AbsTotAfis
             // 
@@ -275,7 +270,16 @@
             this.l_AbsTotAfis.Name = "l_AbsTotAfis";
             this.l_AbsTotAfis.Size = new System.Drawing.Size(156, 23);
             this.l_AbsTotAfis.TabIndex = 3;
-            this.l_AbsTotAfis.Text = "y";
+            // 
+            // tv_school
+            // 
+            this.tv_school.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.tv_school.Location = new System.Drawing.Point(905, 50);
+            this.tv_school.Name = "tv_school";
+            this.tv_school.Size = new System.Drawing.Size(313, 552);
+            this.tv_school.TabIndex = 9;
+            this.tv_school.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tv_school_AfterSelect);
             // 
             // SituatiaCurentaForm
             // 
@@ -284,7 +288,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(27)))), ((int)(((byte)(86)))));
             this.BackgroundImage = global::SchoolSoft.Properties.Resources.BlueFog;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(911, 603);
+            this.ClientSize = new System.Drawing.Size(1218, 603);
+            this.Controls.Add(this.tv_school);
             this.Controls.Add(this.fl_Total);
             this.Controls.Add(this.fl_Marks);
             this.Controls.Add(this.fl_Disciplines);
@@ -331,5 +336,6 @@
         private System.Windows.Forms.Label l_AbsTot;
         private System.Windows.Forms.Label l_MedTotAfis;
         private System.Windows.Forms.Label l_AbsTotAfis;
+        private System.Windows.Forms.TreeView tv_school;
     }
 }

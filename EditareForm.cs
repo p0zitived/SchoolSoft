@@ -28,8 +28,30 @@ namespace SchoolSoft
 
             setUpTreeView();
             setUpComboBox();
+            setUpTeacherComboBox();
+            hideCreateGroup();
         }
 
+        private void hideCreateGroup()
+        {
+            l_Letter.Visible = false;
+            l_Year.Visible = false;
+            cb_Letter.Visible = false;
+            cb_Year.Visible = false;
+            b_Create.Visible = false;
+            cb_Teachers.Visible = false;
+            l_Teacher.Visible = false;
+        }
+        private void showCreateGroup()
+        {
+            l_Letter.Visible = true;
+            l_Year.Visible = true;
+            cb_Letter.Visible = true;
+            cb_Year.Visible = true;
+            b_Create.Visible = true;
+            cb_Teachers.Visible = true;
+            l_Teacher.Visible = true;
+        }
         private void setUpTreeView()
         {
             tv_school.BeginUpdate();
@@ -52,9 +74,23 @@ namespace SchoolSoft
         }
         private void setUpComboBox()
         {
+            cb_Grupa.Items.Clear();
+            cb_GroupToDelete.Items.Clear();
+            foreach (Group g in _dbc.DS.Groups)
+            {
+                cb_GroupToDelete.Items.Add(g);
+            }
             foreach (Group g in _dbc.DS.Groups)
             {
                 cb_Grupa.Items.Add(g);
+            }
+        }
+        public void setUpTeacherComboBox()
+        {
+            cb_Teachers.Items.Clear();
+            foreach (Teacher t in _dbc.DS.Teachers)
+            {
+                cb_Teachers.Items.Add(t);
             }
         }
 
@@ -161,6 +197,68 @@ namespace SchoolSoft
         private void EditareForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             _menu.Show();
+        }
+
+        private void b_CreateGroup_Click(object sender, EventArgs e)
+        {
+            showCreateGroup();
+        }
+
+        private void b_Create_Click(object sender, EventArgs e)
+        {
+            bool existsSameGroup = false;
+            foreach (Group g in _dbc.DS.Groups)
+            {
+                if (g.GroupYear == int.Parse(cb_Year.SelectedItem.ToString()) && g.GroupLetter == cb_Letter.SelectedItem.ToString().ToArray()[0])
+                {
+                    existsSameGroup = true;
+                }
+            }
+
+            if (!existsSameGroup)
+            {
+                Group g = new Group();
+                g.GroupYear =int.Parse(cb_Year.SelectedItem.ToString());
+                g.GroupLetter = char.Parse(cb_Letter.SelectedItem.ToString());
+                g.ClassMaster =(Teacher) cb_Teachers.SelectedItem;
+
+                int id = 0;
+                foreach (Group gr in _dbc.DS.Groups)
+                {
+                    if (gr.ID > id)
+                    {
+                        id = gr.ID;
+                    }
+                }
+                id += 1;
+                g.ID = id;
+
+                hideCreateGroup();
+                setUpTreeView();
+                _dbc.AddNewGroup(g);
+            } else
+            {
+                MessageBox.Show("O astfel grupa exista deja !");
+            }
+        }
+
+        private void b_Profesori_Click(object sender, EventArgs e)
+        {
+            EditareProfesori ep = new EditareProfesori(this,_dbc);
+            ep.Show();
+            Hide();
+        }
+
+        private void b_DeleteGroup_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _dbc.DeleteGroupByID((Group)cb_GroupToDelete.SelectedItem);
+                setUpComboBox();
+            } catch (Exception exp)
+            {
+                MessageBox.Show("Ceva merge gresit :( ");
+            }
         }
     }
 }

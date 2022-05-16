@@ -14,15 +14,18 @@ namespace SchoolSoft
 {
     public partial class SituatiaCurentaForm : Form
     {
+        private DBC _dbc;
+
         private MainMenuForm _menu;
         private Student _student;
-        public SituatiaCurentaForm(MainMenuForm menu,Student student,List<Discipline> disciplines)
+        public SituatiaCurentaForm(MainMenuForm menu,DBC dbc)
         {
             InitializeComponent();
             _menu = menu;
-            _student = student;
+            _dbc = dbc;
 
-            setUpData(student,disciplines,new Size(90,80));
+            //setUpData(student,disciplines,new Size(90,80));
+            setUpTreeView();
 
             // transparenta 
             l_Title.BackColor = Color.FromArgb(0, l_Title.BackColor);
@@ -60,6 +63,7 @@ namespace SchoolSoft
             l_DiriginteAfis.Text = student.Group.ClassMaster.Name;
 
             // setarea butoanelor cu disciplinele
+            fl_Disciplines.Controls.Clear();
             foreach (Discipline discipline in disciplines)
             {
                 Button button = new Button();
@@ -71,6 +75,7 @@ namespace SchoolSoft
             }
 
             // setarea restantelor 
+            l_Restante.Text = "Restante :";
             foreach (DisciplineMarks dm in _student.Marks)
             {
                 if (dm.GetAverage() < 5)
@@ -119,5 +124,44 @@ namespace SchoolSoft
         {
             _menu.Show();
         }
+        #region tree view of students
+        private void setUpTreeView()
+        {
+            tv_school.BeginUpdate();
+            tv_school.Nodes.Clear();
+
+            tv_school.Font = new Font("Microsoft Sans Serif", 12f);
+            foreach (Group group in _dbc.DS.Groups)
+            {
+                TreeNode node = new TreeNode(group.GroupYear + " " + group.GroupLetter);
+
+                foreach (Student student in group.Students)
+                {
+                    node.Nodes.Add(student.ID + " " + student.Name + " " + student.Surname);
+                }
+
+                tv_school.Nodes.Add(node);
+            }
+
+            tv_school.EndUpdate();
+        }
+        private void tv_school_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            try
+            {
+                string[] aux = e.Node.Text.Split(' ');
+                if (aux.Length >= 3) // am pus asta aici ca denumirile la nodurile de grupa au 2 cuvinte
+                {
+                    int id_student = int.Parse(aux[0]);
+                    _student = _dbc.DS.GetStudentpById(id_student);
+                    setUpData(_student, _dbc.DS.Disciplines, new Size(90, 80));
+                }
+            }
+            catch
+            {
+
+            }
+        }
+        #endregion
     }
 }

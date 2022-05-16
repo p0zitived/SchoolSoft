@@ -45,3 +45,9 @@ C:\Users\Pc\Desktop\SchoolSoft\obj\Debug\SchoolSoft.EditareForm.resources
 C:\Users\Pc\Desktop\SchoolSoft\obj\Debug\SchoolSoft.MainMenuForm.resources
 C:\Users\Pc\Desktop\SchoolSoft\obj\Debug\SchoolSoft.SituatiaCurentaForm.resources
 C:\Users\Pc\Desktop\SchoolSoft\obj\Debug\SchoolSoft.StudentStats.resources
+C:\Users\Pc\Desktop\SchoolSoft\obj\Debug\SchoolSoft.AuthenticationForm.resources
+C:\Users\Pc\Desktop\SchoolSoft\obj\Debug\SchoolSoft.RegisterForm.resources
+C:\Users\User\Desktop\SchoolSoft\obj\Debug\SchoolSoft.AuthenticationForm.resources
+C:\Users\User\Desktop\SchoolSoft\obj\Debug\SchoolSoft.RegisterForm.resources
+C:\Users\User\Desktop\SchoolSoft\obj\Debug\SchoolSoft.StudentStats.resources
+C:\Users\User\Desktop\SchoolSoft\obj\Debug\SchoolSoft.EditareProfesori.resources

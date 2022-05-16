@@ -24,7 +24,7 @@ namespace SchoolSoft.MainLogic
 
         public override string ToString()
         {
-            return base.ToString() + Discipline.ToString();
+            return Name + " " + Surname;
         }
     }
 }
