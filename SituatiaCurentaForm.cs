@@ -63,6 +63,7 @@ namespace SchoolSoft
             l_DiriginteAfis.Text = student.Group.ClassMaster.Name;
 
             // setarea butoanelor cu disciplinele
+            fl_Disciplines.Controls.Clear();
             foreach (Discipline discipline in disciplines)
             {
                 Button button = new Button();

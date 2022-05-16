@@ -51,6 +51,12 @@
             this.b_Create = new System.Windows.Forms.Button();
             this.cb_Teachers = new System.Windows.Forms.ComboBox();
             this.l_Teacher = new System.Windows.Forms.Label();
+            this.b_Profesori = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.b_DeleteGroup = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cb_GroupToDelete = new System.Windows.Forms.ComboBox();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // l_title
@@ -317,11 +323,65 @@
             this.l_Teacher.TabIndex = 23;
             this.l_Teacher.Text = "Profesor :";
             // 
+            // b_Profesori
+            // 
+            this.b_Profesori.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.b_Profesori.Location = new System.Drawing.Point(316, 422);
+            this.b_Profesori.Name = "b_Profesori";
+            this.b_Profesori.Size = new System.Drawing.Size(143, 28);
+            this.b_Profesori.TabIndex = 25;
+            this.b_Profesori.Text = "Profesori";
+            this.b_Profesori.UseVisualStyleBackColor = true;
+            this.b_Profesori.Click += new System.EventHandler(this.b_Profesori_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.b_DeleteGroup);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.cb_GroupToDelete);
+            this.panel1.Location = new System.Drawing.Point(316, 369);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(438, 47);
+            this.panel1.TabIndex = 26;
+            // 
+            // b_DeleteGroup
+            // 
+            this.b_DeleteGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.b_DeleteGroup.Location = new System.Drawing.Point(249, 8);
+            this.b_DeleteGroup.Name = "b_DeleteGroup";
+            this.b_DeleteGroup.Size = new System.Drawing.Size(179, 28);
+            this.b_DeleteGroup.TabIndex = 21;
+            this.b_DeleteGroup.Text = "Sterge Grupa";
+            this.b_DeleteGroup.UseVisualStyleBackColor = true;
+            this.b_DeleteGroup.Click += new System.EventHandler(this.b_DeleteGroup_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label6.Location = new System.Drawing.Point(3, 8);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(72, 24);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Grupa :";
+            // 
+            // cb_GroupToDelete
+            // 
+            this.cb_GroupToDelete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_GroupToDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.cb_GroupToDelete.FormattingEnabled = true;
+            this.cb_GroupToDelete.Location = new System.Drawing.Point(81, 8);
+            this.cb_GroupToDelete.Name = "cb_GroupToDelete";
+            this.cb_GroupToDelete.Size = new System.Drawing.Size(162, 28);
+            this.cb_GroupToDelete.TabIndex = 21;
+            // 
             // EditareForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(907, 496);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.b_Profesori);
             this.Controls.Add(this.cb_Teachers);
             this.Controls.Add(this.l_Teacher);
             this.Controls.Add(this.b_Create);
@@ -350,6 +410,8 @@
             this.Name = "EditareForm";
             this.Text = "EditareForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EditareForm_FormClosing);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -380,5 +442,10 @@
         private System.Windows.Forms.Button b_Create;
         private System.Windows.Forms.ComboBox cb_Teachers;
         private System.Windows.Forms.Label l_Teacher;
+        private System.Windows.Forms.Button b_Profesori;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button b_DeleteGroup;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cb_GroupToDelete;
     }
 }

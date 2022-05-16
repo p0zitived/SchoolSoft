@@ -74,13 +74,20 @@ namespace SchoolSoft
         }
         private void setUpComboBox()
         {
+            cb_Grupa.Items.Clear();
+            cb_GroupToDelete.Items.Clear();
+            foreach (Group g in _dbc.DS.Groups)
+            {
+                cb_GroupToDelete.Items.Add(g);
+            }
             foreach (Group g in _dbc.DS.Groups)
             {
                 cb_Grupa.Items.Add(g);
             }
         }
-        private void setUpTeacherComboBox()
+        public void setUpTeacherComboBox()
         {
+            cb_Teachers.Items.Clear();
             foreach (Teacher t in _dbc.DS.Teachers)
             {
                 cb_Teachers.Items.Add(t);
@@ -202,7 +209,7 @@ namespace SchoolSoft
             bool existsSameGroup = false;
             foreach (Group g in _dbc.DS.Groups)
             {
-                if (g.GroupYear == (int) cb_Year.SelectedItem && g.GroupLetter == char.Parse((string) cb_Letter.SelectedItem))
+                if (g.GroupYear == int.Parse(cb_Year.SelectedItem.ToString()) && g.GroupLetter == cb_Letter.SelectedItem.ToString().ToArray()[0])
                 {
                     existsSameGroup = true;
                 }
@@ -211,8 +218,8 @@ namespace SchoolSoft
             if (!existsSameGroup)
             {
                 Group g = new Group();
-                g.GroupYear =(int) cb_Year.SelectedItem;
-                g.GroupLetter = (char)cb_Letter.SelectedItem;
+                g.GroupYear =int.Parse(cb_Year.SelectedItem.ToString());
+                g.GroupLetter = char.Parse(cb_Letter.SelectedItem.ToString());
                 g.ClassMaster =(Teacher) cb_Teachers.SelectedItem;
 
                 int id = 0;
@@ -226,10 +233,31 @@ namespace SchoolSoft
                 id += 1;
                 g.ID = id;
 
+                hideCreateGroup();
+                setUpTreeView();
                 _dbc.AddNewGroup(g);
             } else
             {
                 MessageBox.Show("O astfel grupa exista deja !");
+            }
+        }
+
+        private void b_Profesori_Click(object sender, EventArgs e)
+        {
+            EditareProfesori ep = new EditareProfesori(this,_dbc);
+            ep.Show();
+            Hide();
+        }
+
+        private void b_DeleteGroup_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _dbc.DeleteGroupByID((Group)cb_GroupToDelete.SelectedItem);
+                setUpComboBox();
+            } catch (Exception exp)
+            {
+                MessageBox.Show("Ceva merge gresit :( ");
             }
         }
     }

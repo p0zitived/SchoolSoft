@@ -38,24 +38,30 @@ namespace SchoolSoft
             SqlCommand command = new SqlCommand($"Select* from Accounts where AccountLogin='{encrypted_login}'",conn);
             adapter.SelectCommand = command;
             adapter.Fill(dataSet);
-
-            if (dataSet.Tables.Count != 0)
+            try
             {
-                correctLogin = true;
-                string password = (string) dataSet.Tables[0].Rows[0]["AccountPassword"];
-                if (password == encrypted_password)
+                if (dataSet.Tables.Count != 0)
                 {
-                    correctPassword = true;
-                    permision = (string) dataSet.Tables[0].Rows[0]["Permision"];
+                    correctLogin = true;
+                    string password = (string)dataSet.Tables[0].Rows[0]["AccountPassword"];
+                    if (password == encrypted_password)
+                    {
+                        correctPassword = true;
+                        permision = (string)dataSet.Tables[0].Rows[0]["Permision"];
+                    }
                 }
-            }
 
-            if (correctLogin && correctPassword)
-            {
-                MainMenuForm menu = new MainMenuForm(this,permision);
-                menu.Show();
-                Hide();
-            } else
+                if (correctLogin && correctPassword)
+                {
+                    MainMenuForm menu = new MainMenuForm(this, permision);
+                    menu.Show();
+                    Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Login sau parola a fost introdusa gresit");
+                }
+            } catch (Exception exp)
             {
                 MessageBox.Show("Login sau parola a fost introdusa gresit");
             }

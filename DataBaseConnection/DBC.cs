@@ -267,9 +267,49 @@ namespace SchoolSoft.DataBaseConnection
         }
         public void AddNewGroup(Group group)
         {
-            string sql_insert = $"Insert into Groups(ID,GroupYear,GroupLetter) Values ({group.ID},{group.GroupYear},'{group.GroupLetter}',{group.ClassMaster.ID});";
+            string sql_insert = $"Insert into Groups Values ({group.ID},{group.GroupYear},'{group.GroupLetter}',{group.ClassMaster.ID});";
             SqlCommand command = new SqlCommand(sql_insert, _sqlConnection);
             command.ExecuteNonQuery();
+
+            DS.Groups.Add(group);
+        }
+        public void AddNewTeacher(Teacher teacher)
+        {
+            string sql_insert = $"Insert into Teachers Values ({teacher.ID},{teacher.Discipline.ID},'{teacher.Name}','{teacher.Surname}','{teacher.Date.ToString("yyyy-MM-dd")}',{teacher.Salary});";
+            SqlCommand command = new SqlCommand(sql_insert, _sqlConnection);
+            command.ExecuteNonQuery();
+
+
+            DS.Teachers.Add(teacher);
+        }
+        public void DeleteGroupByID(Group group)
+        {
+            // stergem toti studentii legati cu grupa data
+            foreach (Student st in group.Students)
+            {
+                DeleteStudent(st);
+            }
+
+            // stergem grupa
+            string sql_delete = $"Delete from Groups where ID={group.ID}";
+            SqlCommand command = new SqlCommand(sql_delete, _sqlConnection);
+            command.ExecuteNonQuery();
+
+            DS.Groups.Remove(group);
+        }
+        public void DeleteTeacherByID(Teacher teacher)
+        {
+            SqlCommand com;
+            string sql_deleteFromGroup = $"Update Groups set IDTeacher = NULL where IDTeacher={teacher.ID}";
+            com = new SqlCommand(sql_deleteFromGroup, _sqlConnection);
+            com.ExecuteNonQuery();
+
+            string sql_deleteTeacher = $"Delete from Teachers where ID = {teacher.ID}";
+            com = new SqlCommand(sql_deleteTeacher, _sqlConnection);
+            com.ExecuteNonQuery();
+
+            DS.Teachers.Clear();
+            fillTeachers();
         }
         public static string GetConnectionString(string db_name)
         {

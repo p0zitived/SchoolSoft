@@ -85,6 +85,12 @@
     <Compile Include="EditareForm.Designer.cs">
       <DependentUpon>EditareForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditareProfesori.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditareProfesori.Designer.cs">
+      <DependentUpon>EditareProfesori.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditareForm.resx">
       <DependentUpon>EditareForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditareProfesori.resx">
+      <DependentUpon>EditareProfesori.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>

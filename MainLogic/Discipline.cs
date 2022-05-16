@@ -21,7 +21,7 @@ namespace SchoolSoft.MainLogic
 
         public override string ToString()
         {
-            return string.Format("SchoolItem{0}", Name);
+            return Name;
         }
     }
 }
