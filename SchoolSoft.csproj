@@ -178,6 +178,9 @@
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Report8.rdlc" />
+    <EmbeddedResource Include="Reports\ReportEmin.rdlc" />
+    <EmbeddedResource Include="Reports\ReportGroupsAbsences.rdlc" />
     <EmbeddedResource Include="Reports\ReportRest.rdlc" />
     <EmbeddedResource Include="SituatiaCurentaForm.resx">
       <DependentUpon>SituatiaCurentaForm.cs</DependentUpon>
