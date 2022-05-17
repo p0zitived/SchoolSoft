@@ -1,9 +1,11 @@
-﻿using SchoolSoft.DataBaseConnection;
+﻿using Microsoft.Reporting.WinForms;
+using SchoolSoft.DataBaseConnection;
 using SchoolSoft.MainLogic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -24,13 +26,9 @@ namespace SchoolSoft
             _menu = menu;
             _dbc = dbc;
 
-            setUpRestantieri();
-            setUpEminenti();
-            setUpMedie8();
-            setUpTopGrupe();
         }
 
-        
+        /*
         private void setUpRestantieri()
         {
             int trophy_count = 0;
@@ -179,30 +177,33 @@ namespace SchoolSoft
                 fl_grupe.Controls.Add(label1);
             }
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string text = "";
-            bool x = true;
-            foreach (Control c in fl_restantieri.Controls)
-            {
-                Label l = (Label)c;
-                if (x)
-                {
-                    text += l.Text + " ";
-                    x = false;
-                } else
-                {
-                    text += l.Text + "\n";
-                    x = true;
-                }
-            }
-            File.WriteAllText("Restantieri.html", text);
-        }
+        */
+        
 
         private void StudentStats_FormClosing(object sender, FormClosingEventArgs e)
         {
             _menu.Show();
+        }
+
+        private void StudentStats_Load(object sender, EventArgs e)
+        {
+            DataSet _ds = new DataSet();
+            SqlDataAdapter _adapter = new SqlDataAdapter();
+            SqlConnection _connection = new SqlConnection(DBC.GetConnectionString("SchoolDB.mdf"));
+            _connection.Open();
+
+            string sql_select = "Select StudentName,StudentSurname,TotalAverage from ( /* Calculam media totala */ Select IDStudent,Avg(Average) as TotalAverage from ( Select IDStudent,DisciplineName,AVG(cast(Mark as float)) as Average from ( Select IDStudent,DisciplineName,Mark from DisciplineMarks Join Disciplines On Disciplines.ID = DisciplineMarks.IDDiscipline where Mark != -1 ) as Note Group By IDStudent,DisciplineName ) as Medii Group by IDStudent ) as MediaTotala Join ( /* Afisam Numele si prenumele la restantieri */ Select ID,StudentName,StudentSurname from ( Select IDStudent,DisciplineName,Average from ( Select IDStudent,DisciplineName,AVG(cast(Mark as float)) as Average from ( Select IDStudent,DisciplineName,Mark from DisciplineMarks Join Disciplines On Disciplines.ID = DisciplineMarks.IDDiscipline where Mark != -1 ) as Note Group By IDStudent,DisciplineName ) as ToateMediile where Average < 5 ) as Restantierii Join Students ON ID = IDStudent ) as Restantieri ON ID = IDStudent Group by StudentName,StudentSurname,TotalAverage Order by TotalAverage";
+            SqlCommand command = new SqlCommand(sql_select, _connection);
+            _adapter.SelectCommand = command;
+            _adapter.Fill(_ds);
+            _connection.Close();
+            
+            reportViewer1.LocalReport.DataSources.Clear();
+            ReportDataSource source = new ReportDataSource("DataSet1",_ds.Tables[0]);
+            reportViewer1.LocalReport.DataSources.Add(source);
+
+            this.reportViewer1.RefreshReport();
+            this.reportViewer1.RefreshReport();
         }
     }
 }
