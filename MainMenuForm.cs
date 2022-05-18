@@ -187,5 +187,12 @@ namespace SchoolSoft
             Hide();
             ss.Show();
         }
+
+        private void b_Events_Click(object sender, EventArgs e)
+        {
+            BehaviourForm bf = new BehaviourForm(this, dbc);
+            bf.Show();
+            Hide();
+        }
     }
 }

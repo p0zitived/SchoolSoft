@@ -75,6 +75,7 @@
             this.b_Events.Size = new System.Drawing.Size(400, 400);
             this.b_Events.TabIndex = 1;
             this.b_Events.UseVisualStyleBackColor = true;
+            this.b_Events.Click += new System.EventHandler(this.b_Events_Click);
             // 
             // b_Catalog
             // 
