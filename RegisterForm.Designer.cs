@@ -60,6 +60,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(12, 84);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(167, 34);
@@ -69,6 +70,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 34);
@@ -86,6 +88,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(12, 159);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(167, 34);
@@ -104,6 +107,7 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
             this.label4.Location = new System.Drawing.Point(12, 234);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(182, 34);
@@ -113,6 +117,7 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
             this.label5.Location = new System.Drawing.Point(262, 196);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(167, 34);
@@ -121,10 +126,10 @@
             // 
             // b_Register
             // 
-            this.b_Register.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.b_Register.Location = new System.Drawing.Point(177, 324);
+            this.b_Register.Font = new System.Drawing.Font("Century", 17F, System.Drawing.FontStyle.Bold);
+            this.b_Register.Location = new System.Drawing.Point(149, 324);
             this.b_Register.Name = "b_Register";
-            this.b_Register.Size = new System.Drawing.Size(136, 57);
+            this.b_Register.Size = new System.Drawing.Size(196, 57);
             this.b_Register.TabIndex = 13;
             this.b_Register.Text = "Register";
             this.b_Register.UseVisualStyleBackColor = true;
@@ -134,6 +139,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(495, 393);
             this.Controls.Add(this.b_Register);
             this.Controls.Add(this.label5);
@@ -145,6 +151,8 @@
             this.Controls.Add(this.tb_Login);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "RegisterForm";
             this.Text = "RegisterForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RegisterForm_FormClosing);

@@ -103,6 +103,26 @@ namespace SchoolSoft.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BookIconBig {
+            get {
+                object obj = ResourceManager.GetObject("BookIconBig", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CarteIcon {
+            get {
+                object obj = ResourceManager.GetObject("CarteIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Catalog {
             get {
                 object obj = ResourceManager.GetObject("Catalog", resourceCulture);
@@ -153,6 +173,26 @@ namespace SchoolSoft.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap KeyIconColor {
+            get {
+                object obj = ResourceManager.GetObject("KeyIconColor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap KeyiconWhite {
+            get {
+                object obj = ResourceManager.GetObject("KeyiconWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Orar {
             get {
                 object obj = ResourceManager.GetObject("Orar", resourceCulture);
@@ -176,6 +216,16 @@ namespace SchoolSoft.Properties {
         internal static System.Drawing.Bitmap TopButton {
             get {
                 object obj = ResourceManager.GetObject("TopButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_icon {
+            get {
+                object obj = ResourceManager.GetObject("User-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
