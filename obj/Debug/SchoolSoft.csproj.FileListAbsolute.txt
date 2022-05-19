@@ -307,3 +307,4 @@ C:\Users\User\Desktop\Git\SchoolSoft\obj\Debug\SchoolSoft.csproj.CopyComplete
 C:\Users\User\Desktop\Git\SchoolSoft\obj\Debug\SchoolSoft.exe
 C:\Users\User\Desktop\Git\SchoolSoft\obj\Debug\SchoolSoft.pdb
 C:\Users\User\Desktop\Git\SchoolSoft\obj\Debug\SchoolSoft.BehaviourForm.resources
+C:\Users\User\Desktop\SchoolSoft\obj\Debug\SchoolSoft.BehaviourForm.resources
