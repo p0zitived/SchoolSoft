@@ -49,6 +49,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System">
       <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll</HintPath>
     </Reference>
@@ -69,6 +87,12 @@
     </Compile>
     <Compile Include="AuthenticationForm.Designer.cs">
       <DependentUpon>AuthenticationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BehaviourForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BehaviourForm.Designer.cs">
+      <DependentUpon>BehaviourForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CatalogForm.cs">
       <SubType>Form</SubType>
@@ -111,12 +135,21 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SchoolDBDataSet.cs">
+      <DependentUpon>SchoolDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchoolDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SituatiaCurentaForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SituatiaCurentaForm.Designer.cs">
       <DependentUpon>SituatiaCurentaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="StudentStats.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +158,9 @@
     </Compile>
     <EmbeddedResource Include="AuthenticationForm.resx">
       <DependentUpon>AuthenticationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BehaviourForm.resx">
+      <DependentUpon>BehaviourForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CatalogForm.resx">
       <DependentUpon>CatalogForm.cs</DependentUpon>
@@ -151,12 +187,37 @@
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Report8.rdlc" />
+    <EmbeddedResource Include="Reports\ReportEmin.rdlc" />
+    <EmbeddedResource Include="Reports\ReportGroupsAbsences.rdlc" />
+    <EmbeddedResource Include="Reports\ReportRest.rdlc" />
     <EmbeddedResource Include="SituatiaCurentaForm.resx">
       <DependentUpon>SituatiaCurentaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentStats.resx">
       <DependentUpon>StudentStats.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\AuthenticationForm.datasource" />
+    <None Include="Properties\DataSources\CatalogForm.datasource" />
+    <None Include="Properties\DataSources\EditareForm.datasource" />
+    <None Include="Properties\DataSources\EditareProfesori.datasource" />
+    <None Include="Properties\DataSources\MainMenuForm.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\RegisterForm.datasource" />
+    <None Include="Properties\DataSources\SchoolSoft.Crypto.EnDeCrypto.datasource" />
+    <None Include="Properties\DataSources\SchoolSoft.DataBaseConnection.DataStorage.datasource" />
+    <None Include="Properties\DataSources\SchoolSoft.DataBaseConnection.DBC.datasource" />
+    <None Include="Properties\DataSources\SchoolSoft.MainLogic.Discipline.datasource" />
+    <None Include="Properties\DataSources\SchoolSoft.MainLogic.DisciplineMarks.datasource" />
+    <None Include="Properties\DataSources\SchoolSoft.MainLogic.Group.datasource" />
+    <None Include="Properties\DataSources\SchoolSoft.MainLogic.Person.datasource" />
+    <None Include="Properties\DataSources\SchoolSoft.MainLogic.Student.datasource" />
+    <None Include="Properties\DataSources\SchoolSoft.MainLogic.Teacher.datasource" />
+    <None Include="Properties\DataSources\SchoolSoft.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\SchoolSoft.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\SituatiaCurentaForm.datasource" />
+    <None Include="Properties\DataSources\StudentStats.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -166,11 +227,37 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SchoolDBDataSet.xsc">
+      <DependentUpon>SchoolDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SchoolDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SchoolDBDataSet.xss">
+      <DependentUpon>SchoolDBDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Evenimente.jpg" />
+    <None Include="Resources\EvenimenteBrown.jpg" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\background_1.jpg" />
     <None Include="Resources\forest_bg.jpg" />
     <None Include="Resources\SituatiaCurenta.jpg" />

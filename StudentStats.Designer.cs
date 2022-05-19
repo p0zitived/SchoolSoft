@@ -28,27 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.fl_restantieri = new System.Windows.Forms.FlowLayoutPanel();
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.RestantieriBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.fl_eminenti = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
-            this.fl_medie = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
-            this.fl_grupe = new System.Windows.Forms.FlowLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.reportViewer3 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.reportViewer4 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.Eminem8BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.SchoolDBDataSet = new SchoolSoft.SchoolDBDataSet();
+            this.GrupeAbsenteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.RestantieriBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Eminem8BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SchoolDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GrupeAbsenteBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // fl_restantieri
-            // 
-            this.fl_restantieri.AutoScroll = true;
-            this.fl_restantieri.Location = new System.Drawing.Point(2, 41);
-            this.fl_restantieri.Name = "fl_restantieri";
-            this.fl_restantieri.Size = new System.Drawing.Size(315, 695);
-            this.fl_restantieri.TabIndex = 0;
             // 
             // label1
             // 
@@ -70,14 +71,6 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Top Eminenti";
             // 
-            // fl_eminenti
-            // 
-            this.fl_eminenti.AutoScroll = true;
-            this.fl_eminenti.Location = new System.Drawing.Point(323, 41);
-            this.fl_eminenti.Name = "fl_eminenti";
-            this.fl_eminenti.Size = new System.Drawing.Size(313, 695);
-            this.fl_eminenti.TabIndex = 2;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -88,113 +81,119 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Medie > 8.5 , Absente < 40";
             // 
-            // fl_medie
-            // 
-            this.fl_medie.AutoScroll = true;
-            this.fl_medie.Location = new System.Drawing.Point(641, 41);
-            this.fl_medie.Name = "fl_medie";
-            this.fl_medie.Size = new System.Drawing.Size(375, 695);
-            this.fl_medie.TabIndex = 4;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
-            this.label4.Location = new System.Drawing.Point(1036, 9);
+            this.label4.Location = new System.Drawing.Point(1003, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(240, 29);
             this.label4.TabIndex = 7;
             this.label4.Text = "Top Grupe (Absente)";
             // 
-            // fl_grupe
+            // reportViewer1
             // 
-            this.fl_grupe.AutoScroll = true;
-            this.fl_grupe.Location = new System.Drawing.Point(1022, 41);
-            this.fl_grupe.Name = "fl_grupe";
-            this.fl_grupe.Size = new System.Drawing.Size(254, 695);
-            this.fl_grupe.TabIndex = 6;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.RestantieriBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "SchoolSoft.Reports.ReportRest.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(3, 41);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(314, 769);
+            this.reportViewer1.TabIndex = 8;
             // 
-            // button1
+            // reportViewer2
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button1.Location = new System.Drawing.Point(70, 742);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(161, 40);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Export";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            reportDataSource2.Name = "DataSet1";
+            reportDataSource2.Value = this.RestantieriBindingSource;
+            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer2.LocalReport.ReportEmbeddedResource = "SchoolSoft.Reports.ReportEmin.rdlc";
+            this.reportViewer2.Location = new System.Drawing.Point(323, 41);
+            this.reportViewer2.Name = "reportViewer2";
+            this.reportViewer2.ServerReport.BearerToken = null;
+            this.reportViewer2.Size = new System.Drawing.Size(314, 769);
+            this.reportViewer2.TabIndex = 9;
             // 
-            // button2
+            // reportViewer3
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button2.Location = new System.Drawing.Point(394, 742);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(161, 40);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Export";
-            this.button2.UseVisualStyleBackColor = true;
+            reportDataSource3.Name = "DataSet1";
+            reportDataSource3.Value = this.Eminem8BindingSource;
+            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource3);
+            this.reportViewer3.LocalReport.ReportEmbeddedResource = "SchoolSoft.Reports.Report8.rdlc";
+            this.reportViewer3.Location = new System.Drawing.Point(643, 41);
+            this.reportViewer3.Name = "reportViewer3";
+            this.reportViewer3.ServerReport.BearerToken = null;
+            this.reportViewer3.Size = new System.Drawing.Size(314, 769);
+            this.reportViewer3.TabIndex = 10;
             // 
-            // button3
+            // reportViewer4
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button3.Location = new System.Drawing.Point(740, 742);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(161, 40);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Export";
-            this.button3.UseVisualStyleBackColor = true;
+            reportDataSource4.Name = "DataSet1";
+            reportDataSource4.Value = this.GrupeAbsenteBindingSource;
+            this.reportViewer4.LocalReport.DataSources.Add(reportDataSource4);
+            this.reportViewer4.LocalReport.ReportEmbeddedResource = "SchoolSoft.Reports.ReportGroupsAbsences.rdlc";
+            this.reportViewer4.Location = new System.Drawing.Point(963, 41);
+            this.reportViewer4.Name = "reportViewer4";
+            this.reportViewer4.ServerReport.BearerToken = null;
+            this.reportViewer4.Size = new System.Drawing.Size(314, 769);
+            this.reportViewer4.TabIndex = 11;
             // 
-            // button4
+            // Eminem8BindingSource
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button4.Location = new System.Drawing.Point(1070, 742);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(161, 40);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "Export";
-            this.button4.UseVisualStyleBackColor = true;
+            this.Eminem8BindingSource.DataMember = "Eminem8";
+            this.Eminem8BindingSource.DataSource = this.SchoolDBDataSet;
+            // 
+            // SchoolDBDataSet
+            // 
+            this.SchoolDBDataSet.DataSetName = "SchoolDBDataSet";
+            this.SchoolDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // GrupeAbsenteBindingSource
+            // 
+            this.GrupeAbsenteBindingSource.DataMember = "GrupeAbsente";
+            this.GrupeAbsenteBindingSource.DataSource = this.SchoolDBDataSet;
             // 
             // StudentStats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1285, 810);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.reportViewer4);
+            this.Controls.Add(this.reportViewer3);
+            this.Controls.Add(this.reportViewer2);
+            this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.fl_grupe);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.fl_medie);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.fl_eminenti);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.fl_restantieri);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "StudentStats";
             this.Text = "StudentStats";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StudentStats_FormClosing);
+            this.Load += new System.EventHandler(this.StudentStats_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.RestantieriBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Eminem8BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SchoolDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GrupeAbsenteBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel fl_restantieri;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.FlowLayoutPanel fl_eminenti;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.FlowLayoutPanel fl_medie;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.FlowLayoutPanel fl_grupe;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource RestantieriBindingSource;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer2;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer3;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer4;
+        private SchoolDBDataSet SchoolDBDataSet;
+        private System.Windows.Forms.BindingSource Eminem8BindingSource;
+        private System.Windows.Forms.BindingSource GrupeAbsenteBindingSource;
     }
 }
