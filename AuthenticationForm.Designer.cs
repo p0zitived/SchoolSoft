@@ -62,18 +62,18 @@
             // 
             // tb_Login
             // 
-            this.tb_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.tb_Login.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.tb_Login.Location = new System.Drawing.Point(59, 210);
             this.tb_Login.Name = "tb_Login";
-            this.tb_Login.Size = new System.Drawing.Size(391, 35);
+            this.tb_Login.Size = new System.Drawing.Size(391, 39);
             this.tb_Login.TabIndex = 2;
             // 
             // tb_Password
             // 
-            this.tb_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.tb_Password.Location = new System.Drawing.Point(59, 285);
+            this.tb_Password.Font = new System.Drawing.Font("Microsoft YaHei", 18F);
+            this.tb_Password.Location = new System.Drawing.Point(59, 281);
             this.tb_Password.Name = "tb_Password";
-            this.tb_Password.Size = new System.Drawing.Size(391, 35);
+            this.tb_Password.Size = new System.Drawing.Size(391, 39);
             this.tb_Password.TabIndex = 3;
             this.tb_Password.UseSystemPasswordChar = true;
             // 

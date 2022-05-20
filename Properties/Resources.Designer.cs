@@ -143,6 +143,16 @@ namespace SchoolSoft.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap EmailIconWhite {
+            get {
+                object obj = ResourceManager.GetObject("EmailIconWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Evenimente {
             get {
                 object obj = ResourceManager.GetObject("Evenimente", resourceCulture);
@@ -193,9 +203,39 @@ namespace SchoolSoft.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap LockIconWhite {
+            get {
+                object obj = ResourceManager.GetObject("LockIconWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Orar {
             get {
                 object obj = ResourceManager.GetObject("Orar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ScoldingBackGround {
+            get {
+                object obj = ResourceManager.GetObject("ScoldingBackGround", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SecretCodeIcon {
+            get {
+                object obj = ResourceManager.GetObject("SecretCodeIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -226,6 +266,16 @@ namespace SchoolSoft.Properties {
         internal static System.Drawing.Bitmap User_icon {
             get {
                 object obj = ResourceManager.GetObject("User-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UserIconWhite {
+            get {
+                object obj = ResourceManager.GetObject("UserIconWhite", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

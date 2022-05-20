@@ -56,12 +56,15 @@
             this.b_DeleteGroup = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.cb_GroupToDelete = new System.Windows.Forms.ComboBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // l_title
             // 
             this.l_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.l_title.ForeColor = System.Drawing.Color.White;
             this.l_title.Location = new System.Drawing.Point(-1, -2);
             this.l_title.Name = "l_title";
             this.l_title.Size = new System.Drawing.Size(912, 39);
@@ -73,6 +76,8 @@
             // 
             this.tv_school.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.tv_school.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(118)))), ((int)(((byte)(53)))));
+            this.tv_school.ForeColor = System.Drawing.Color.White;
             this.tv_school.Location = new System.Drawing.Point(-4, 34);
             this.tv_school.Name = "tv_school";
             this.tv_school.Size = new System.Drawing.Size(309, 462);
@@ -82,7 +87,8 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label1.Location = new System.Drawing.Point(311, 77);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(10, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 39);
             this.label1.TabIndex = 2;
@@ -92,7 +98,8 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label2.Location = new System.Drawing.Point(311, 108);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(10, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(120, 39);
             this.label2.TabIndex = 3;
@@ -102,7 +109,8 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label3.Location = new System.Drawing.Point(311, 144);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(10, 85);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 39);
             this.label3.TabIndex = 4;
@@ -112,7 +120,8 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label4.Location = new System.Drawing.Point(311, 175);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(10, 116);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 39);
             this.label4.TabIndex = 5;
@@ -122,7 +131,7 @@
             // tb_Name
             // 
             this.tb_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.tb_Name.Location = new System.Drawing.Point(437, 82);
+            this.tb_Name.Location = new System.Drawing.Point(136, 23);
             this.tb_Name.Name = "tb_Name";
             this.tb_Name.Size = new System.Drawing.Size(132, 27);
             this.tb_Name.TabIndex = 6;
@@ -130,7 +139,7 @@
             // tb_Surname
             // 
             this.tb_Surname.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.tb_Surname.Location = new System.Drawing.Point(437, 115);
+            this.tb_Surname.Location = new System.Drawing.Point(136, 56);
             this.tb_Surname.Name = "tb_Surname";
             this.tb_Surname.Size = new System.Drawing.Size(132, 27);
             this.tb_Surname.TabIndex = 7;
@@ -140,7 +149,7 @@
             this.cb_Grupa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Grupa.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.cb_Grupa.FormattingEnabled = true;
-            this.cb_Grupa.Location = new System.Drawing.Point(437, 181);
+            this.cb_Grupa.Location = new System.Drawing.Point(136, 122);
             this.cb_Grupa.Name = "cb_Grupa";
             this.cb_Grupa.Size = new System.Drawing.Size(132, 28);
             this.cb_Grupa.TabIndex = 9;
@@ -159,7 +168,7 @@
             // dtp_Date
             // 
             this.dtp_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.dtp_Date.Location = new System.Drawing.Point(437, 148);
+            this.dtp_Date.Location = new System.Drawing.Point(136, 89);
             this.dtp_Date.Name = "dtp_Date";
             this.dtp_Date.Size = new System.Drawing.Size(281, 27);
             this.dtp_Date.TabIndex = 12;
@@ -209,7 +218,7 @@
             // b_CreateGroup
             // 
             this.b_CreateGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.b_CreateGroup.Location = new System.Drawing.Point(575, 181);
+            this.b_CreateGroup.Location = new System.Drawing.Point(274, 122);
             this.b_CreateGroup.Name = "b_CreateGroup";
             this.b_CreateGroup.Size = new System.Drawing.Size(143, 28);
             this.b_CreateGroup.TabIndex = 17;
@@ -255,6 +264,7 @@
             // l_Letter
             // 
             this.l_Letter.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.l_Letter.ForeColor = System.Drawing.Color.White;
             this.l_Letter.Location = new System.Drawing.Point(609, 249);
             this.l_Letter.Name = "l_Letter";
             this.l_Letter.Size = new System.Drawing.Size(74, 28);
@@ -287,6 +297,7 @@
             // l_Year
             // 
             this.l_Year.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.l_Year.ForeColor = System.Drawing.Color.White;
             this.l_Year.Location = new System.Drawing.Point(618, 215);
             this.l_Year.Name = "l_Year";
             this.l_Year.Size = new System.Drawing.Size(65, 31);
@@ -317,6 +328,7 @@
             // l_Teacher
             // 
             this.l_Teacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.l_Teacher.ForeColor = System.Drawing.Color.White;
             this.l_Teacher.Location = new System.Drawing.Point(584, 281);
             this.l_Teacher.Name = "l_Teacher";
             this.l_Teacher.Size = new System.Drawing.Size(108, 28);
@@ -336,6 +348,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(118)))), ((int)(((byte)(53)))));
             this.panel1.Controls.Add(this.b_DeleteGroup);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.cb_GroupToDelete);
@@ -359,6 +372,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(3, 8);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 24);
@@ -375,11 +389,30 @@
             this.cb_GroupToDelete.Size = new System.Drawing.Size(162, 28);
             this.cb_GroupToDelete.TabIndex = 21;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(118)))), ((int)(((byte)(53)))));
+            this.panel2.Controls.Add(this.tb_Name);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.tb_Surname);
+            this.panel2.Controls.Add(this.cb_Grupa);
+            this.panel2.Controls.Add(this.dtp_Date);
+            this.panel2.Controls.Add(this.b_CreateGroup);
+            this.panel2.Location = new System.Drawing.Point(316, 34);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(430, 170);
+            this.panel2.TabIndex = 27;
+            // 
             // EditareForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(137)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(907, 496);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.b_Profesori);
             this.Controls.Add(this.cb_Teachers);
@@ -389,22 +422,14 @@
             this.Controls.Add(this.l_Letter);
             this.Controls.Add(this.cb_Year);
             this.Controls.Add(this.l_Year);
-            this.Controls.Add(this.b_CreateGroup);
             this.Controls.Add(this.b_Add);
             this.Controls.Add(this.b_Deselect);
             this.Controls.Add(this.l_SelectedStud);
             this.Controls.Add(this.b_Save);
-            this.Controls.Add(this.dtp_Date);
             this.Controls.Add(this.b_Exmatriculeaza);
-            this.Controls.Add(this.cb_Grupa);
-            this.Controls.Add(this.tb_Surname);
-            this.Controls.Add(this.tb_Name);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.tv_school);
             this.Controls.Add(this.l_title);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "EditareForm";
@@ -412,8 +437,9 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EditareForm_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -447,5 +473,6 @@
         private System.Windows.Forms.Button b_DeleteGroup;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cb_GroupToDelete;
+        private System.Windows.Forms.Panel panel2;
     }
 }

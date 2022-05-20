@@ -45,6 +45,8 @@
             // 
             this.tv_school.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.tv_school.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(43)))), ((int)(((byte)(51)))));
+            this.tv_school.ForeColor = System.Drawing.SystemColors.Menu;
             this.tv_school.Location = new System.Drawing.Point(0, 46);
             this.tv_school.Name = "tv_school";
             this.tv_school.Size = new System.Drawing.Size(307, 473);
@@ -67,7 +69,7 @@
             this.l_Title.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.l_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.l_Title.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.l_Title.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.l_Title.Location = new System.Drawing.Point(312, 0);
             this.l_Title.Name = "l_Title";
             this.l_Title.Size = new System.Drawing.Size(617, 43);
@@ -77,7 +79,9 @@
             // 
             // rt_Marks
             // 
+            this.rt_Marks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(43)))), ((int)(((byte)(51)))));
             this.rt_Marks.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rt_Marks.ForeColor = System.Drawing.SystemColors.Menu;
             this.rt_Marks.Location = new System.Drawing.Point(312, 205);
             this.rt_Marks.Name = "rt_Marks";
             this.rt_Marks.Size = new System.Drawing.Size(617, 216);
@@ -87,7 +91,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Location = new System.Drawing.Point(2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(305, 43);
@@ -100,7 +104,7 @@
             this.l_Medie.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.l_Medie.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.l_Medie.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.l_Medie.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.l_Medie.Location = new System.Drawing.Point(313, 424);
             this.l_Medie.Name = "l_Medie";
             this.l_Medie.Size = new System.Drawing.Size(133, 38);
@@ -113,7 +117,7 @@
             this.l_Abs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.l_Abs.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.l_Abs.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.l_Abs.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.l_Abs.Location = new System.Drawing.Point(313, 462);
             this.l_Abs.Name = "l_Abs";
             this.l_Abs.Size = new System.Drawing.Size(133, 38);
@@ -126,7 +130,7 @@
             this.l_MedieAfis.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.l_MedieAfis.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.l_MedieAfis.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.l_MedieAfis.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.l_MedieAfis.Location = new System.Drawing.Point(452, 424);
             this.l_MedieAfis.Name = "l_MedieAfis";
             this.l_MedieAfis.Size = new System.Drawing.Size(110, 38);
@@ -139,7 +143,7 @@
             this.l_AbsAfis.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.l_AbsAfis.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.l_AbsAfis.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.l_AbsAfis.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.l_AbsAfis.Location = new System.Drawing.Point(452, 462);
             this.l_AbsAfis.Name = "l_AbsAfis";
             this.l_AbsAfis.Size = new System.Drawing.Size(110, 38);
@@ -163,7 +167,7 @@
             this.l_SelectedStud.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.l_SelectedStud.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.l_SelectedStud.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.l_SelectedStud.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.l_SelectedStud.Location = new System.Drawing.Point(312, 161);
             this.l_SelectedStud.Name = "l_SelectedStud";
             this.l_SelectedStud.Size = new System.Drawing.Size(617, 43);
@@ -175,6 +179,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(66)))), ((int)(((byte)(78)))));
             this.ClientSize = new System.Drawing.Size(933, 519);
             this.Controls.Add(this.l_SelectedStud);
             this.Controls.Add(this.b_Save);

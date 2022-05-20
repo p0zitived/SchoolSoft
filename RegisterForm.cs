@@ -38,37 +38,44 @@ namespace SchoolSoft
 
         private void b_Register_Click(object sender, EventArgs e)
         {
-            string login;
-            string password;
-            string email;
-            string permision;
-
-            if (tb_Code.Text == codeForDirector)
-                permision = "Director";
-            else if (tb_Code.Text == codeForTeacher)
-                permision = "Teacher";
-            else
-                permision = "Student";
-
-            login = EnDeCrypto.EncryptText(tb_Login.Text);
-            password = EnDeCrypto.EncryptText(tb_Password.Text);
-            email = EnDeCrypto.EncryptText(tb_Email.Text + "@gmail.com");
-
-            SqlConnection conn = new SqlConnection(DBC.GetConnectionString("SchoolDB.mdf"));
-            conn.Open();
-            string sql_insert = $"Insert into Accounts Values ('{login}','{password}','{email}','{permision}');";
-            try
+            if (tb_Login.Text != "" && tb_Password.Text != "" && tb_Email.Text != "")
             {
-                SqlCommand command = new SqlCommand(sql_insert, conn);
-                command.ExecuteNonQuery();
+                string login;
+                string password;
+                string email;
+                string permision;
+
+                if (tb_Code.Text == codeForDirector)
+                    permision = "Director";
+                else if (tb_Code.Text == codeForTeacher)
+                    permision = "Teacher";
+                else
+                    permision = "Student";
+
+                login = EnDeCrypto.EncryptText(tb_Login.Text);
+                password = EnDeCrypto.EncryptText(tb_Password.Text);
+                email = EnDeCrypto.EncryptText(tb_Email.Text + "@gmail.com");
+
+                SqlConnection conn = new SqlConnection(DBC.GetConnectionString("SchoolDB.mdf"));
+                conn.Open();
+                string sql_insert = $"Insert into Accounts Values ('{login}','{password}','{email}','{permision}');";
+                try
+                {
+                    SqlCommand command = new SqlCommand(sql_insert, conn);
+                    command.ExecuteNonQuery();
+                    conn.Close();
+                    Close();
+                    _auth.Show();
+                }
+                catch (Exception exp)
+                {
+                    MessageBox.Show("Datele introduse nu sunt valide");
+                }
                 conn.Close();
-                Close();
-                _auth.Show();
-            } catch (Exception exp)
+            } else
             {
-                MessageBox.Show("Datele introduse nu sunt valide");
+                MessageBox.Show("Datele nu sunt complete", "Date goale", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            conn.Close();
         }
 
         private void GetPerson(string Name,string Surname,string permision)
