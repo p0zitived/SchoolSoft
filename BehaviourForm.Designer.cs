@@ -29,13 +29,52 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.l_text = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.FadeTimer = new System.Windows.Forms.Timer(this.components);
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.l_text = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(167, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(478, 48);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Evenimentele scolare \r\ndetectate de camerele de luat vederi";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // FadeTimer
+            // 
+            this.FadeTimer.Interval = 5;
+            this.FadeTimer.Tick += new System.EventHandler(this.FadeTimer_Tick);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(44)))), ((int)(((byte)(36)))));
+            this.flowLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.flowLayoutPanel1.Controls.Add(this.l_text);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(58, 86);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(680, 366);
+            this.flowLayoutPanel1.TabIndex = 1;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // l_text
             // 
@@ -46,49 +85,16 @@
             this.l_text.Size = new System.Drawing.Size(0, 23);
             this.l_text.TabIndex = 0;
             // 
-            // timer
-            // 
-            this.timer.Enabled = true;
-            this.timer.Tick += new System.EventHandler(this.timer_Tick);
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.l_text);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(58, 86);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(680, 366);
-            this.flowLayoutPanel1.TabIndex = 1;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("SimSun", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(195, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(405, 38);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Evenimentele scolare \r\ndetectate de camerele de luat vederi";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // FadeTimer
-            // 
-            this.FadeTimer.Interval = 5;
-            this.FadeTimer.Tick += new System.EventHandler(this.FadeTimer_Tick);
-            // 
             // BehaviourForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(54)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "BehaviourForm";
             this.Text = "BehaviourForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BehaviourForm_FormClosing);

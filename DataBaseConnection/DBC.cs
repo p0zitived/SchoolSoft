@@ -128,18 +128,6 @@ namespace SchoolSoft.DataBaseConnection
             }
 
             _dataSet.Tables.Clear();
-
-            // adaugam lista studentilor la fiecare grupa
-            foreach (Group group in DS.Groups)
-            {
-                foreach (Student student in DS.Students)
-                {
-                    if (student.Group == group)
-                    {
-                        group.Students.Add(student);
-                    }
-                }
-            }
         }
         public void fillDisciplineMarks()
         {

@@ -73,12 +73,12 @@ namespace SchoolSoft
 
         private void FadeTimer_Tick(object sender, EventArgs e)
         {
-            if (l_text.ForeColor != Color.FromArgb(0,0,0,0))
+            if (l_text.ForeColor != Color.FromArgb(0,255,255,255))
             {
                 int r = l_text.ForeColor.R;
                 int g = l_text.ForeColor.G;
                 int b = l_text.ForeColor.B;
-                l_text.ForeColor = Color.FromArgb(0, r==0?0:r-1, g==0?0:g-1,b==0?0:b-1);
+                l_text.ForeColor = Color.FromArgb(0, r==255?255:r+1, g==255?255:g+1,b==255?255:b+1);
             } else
             {
                 FadeTimer.Enabled = false;

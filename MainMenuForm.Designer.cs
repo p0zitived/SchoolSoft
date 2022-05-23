@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.buttonsPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.b_SwipeToRight = new System.Windows.Forms.Button();
-            this.b_SwipeToLeft = new System.Windows.Forms.Button();
             this.b_SituatiaCurenta = new System.Windows.Forms.Button();
             this.b_Events = new System.Windows.Forms.Button();
             this.b_Catalog = new System.Windows.Forms.Button();
             this.b_Editare = new System.Windows.Forms.Button();
             this.b_Stats = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.b_SwipeToRight = new System.Windows.Forms.Button();
+            this.b_SwipeToLeft = new System.Windows.Forms.Button();
             this.buttonsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,34 +54,6 @@
             this.buttonsPanel.Name = "buttonsPanel";
             this.buttonsPanel.Size = new System.Drawing.Size(6000, 471);
             this.buttonsPanel.TabIndex = 0;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 25;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // b_SwipeToRight
-            // 
-            this.b_SwipeToRight.BackgroundImage = global::SchoolSoft.Properties.Resources.ArrowRight;
-            this.b_SwipeToRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.b_SwipeToRight.Location = new System.Drawing.Point(623, 164);
-            this.b_SwipeToRight.Name = "b_SwipeToRight";
-            this.b_SwipeToRight.Size = new System.Drawing.Size(120, 200);
-            this.b_SwipeToRight.TabIndex = 1;
-            this.b_SwipeToRight.UseVisualStyleBackColor = true;
-            this.b_SwipeToRight.Click += new System.EventHandler(this.b_SwipeToRight_Click);
-            // 
-            // b_SwipeToLeft
-            // 
-            this.b_SwipeToLeft.BackgroundImage = global::SchoolSoft.Properties.Resources.ArrowLeft;
-            this.b_SwipeToLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.b_SwipeToLeft.Location = new System.Drawing.Point(65, 164);
-            this.b_SwipeToLeft.Name = "b_SwipeToLeft";
-            this.b_SwipeToLeft.Size = new System.Drawing.Size(120, 200);
-            this.b_SwipeToLeft.TabIndex = 2;
-            this.b_SwipeToLeft.UseVisualStyleBackColor = true;
-            this.b_SwipeToLeft.Click += new System.EventHandler(this.b_SwipeToLeft_Click);
             // 
             // b_SituatiaCurenta
             // 
@@ -137,6 +109,34 @@
             this.b_Stats.TabIndex = 4;
             this.b_Stats.UseVisualStyleBackColor = true;
             this.b_Stats.Click += new System.EventHandler(this.b_Stats_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 25;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // b_SwipeToRight
+            // 
+            this.b_SwipeToRight.BackgroundImage = global::SchoolSoft.Properties.Resources.ArrowRight;
+            this.b_SwipeToRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.b_SwipeToRight.Location = new System.Drawing.Point(623, 164);
+            this.b_SwipeToRight.Name = "b_SwipeToRight";
+            this.b_SwipeToRight.Size = new System.Drawing.Size(120, 200);
+            this.b_SwipeToRight.TabIndex = 1;
+            this.b_SwipeToRight.UseVisualStyleBackColor = true;
+            this.b_SwipeToRight.Click += new System.EventHandler(this.b_SwipeToRight_Click);
+            // 
+            // b_SwipeToLeft
+            // 
+            this.b_SwipeToLeft.BackgroundImage = global::SchoolSoft.Properties.Resources.ArrowLeft;
+            this.b_SwipeToLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.b_SwipeToLeft.Location = new System.Drawing.Point(65, 164);
+            this.b_SwipeToLeft.Name = "b_SwipeToLeft";
+            this.b_SwipeToLeft.Size = new System.Drawing.Size(120, 200);
+            this.b_SwipeToLeft.TabIndex = 2;
+            this.b_SwipeToLeft.UseVisualStyleBackColor = true;
+            this.b_SwipeToLeft.Click += new System.EventHandler(this.b_SwipeToLeft_Click);
             // 
             // MainMenuForm
             // 
