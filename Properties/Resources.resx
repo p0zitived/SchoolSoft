@@ -124,9 +124,6 @@
   <data name="ArrowLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ArrowLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="KeyiconWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KeyiconWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="User-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\User-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -160,11 +157,17 @@
   <data name="SituatiaCurenta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SituatiaCurenta.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="KeyIconColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KeyIconColor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ArrowRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ArrowRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="KeyIconColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KeyIconColor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ScoldingBackGround" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ScoldingBackGround.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="KeyiconWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KeyiconWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LockIconWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LockIconWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,7 +184,7 @@
   <data name="background_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ScoldingBackGround" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ScoldingBackGround.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hell" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hell.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

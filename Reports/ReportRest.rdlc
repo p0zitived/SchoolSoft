@@ -29,7 +29,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Student Name</Value>
-                              <Style />
+                              <Style>
+                                <Color>Aqua</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -41,6 +43,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>#cc0099</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -59,7 +62,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Student Surname</Value>
-                              <Style />
+                              <Style>
+                                <Color>Aqua</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -71,6 +76,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>#cc0099</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -89,7 +95,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Total Average</Value>
-                              <Style />
+                              <Style>
+                                <Color>Aqua</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -101,6 +109,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>#cc0099</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -124,7 +133,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!StudentName.Value</Value>
-                              <Style />
+                              <Style>
+                                <Color>Aqua</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -136,6 +147,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>#cc0044</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -154,7 +166,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!StudentSurname.Value</Value>
-                              <Style />
+                              <Style>
+                                <Color>Aqua</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -166,6 +180,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>#cc0044</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -184,7 +199,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!TotalAverage.Value</Value>
-                              <Style />
+                              <Style>
+                                <Color>Aqua</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -196,6 +213,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>#cc0044</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>

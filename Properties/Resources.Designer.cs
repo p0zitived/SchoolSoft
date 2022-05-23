@@ -183,6 +183,16 @@ namespace SchoolSoft.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hell {
+            get {
+                object obj = ResourceManager.GetObject("hell", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap KeyIconColor {
             get {
                 object obj = ResourceManager.GetObject("KeyIconColor", resourceCulture);

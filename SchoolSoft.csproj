@@ -255,6 +255,7 @@
     <None Include="Resources\EmailIconWhite.png" />
     <None Include="Resources\SecretCodeIcon.png" />
     <None Include="Resources\ScoldingBackGround.png" />
+    <None Include="Resources\hell.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
